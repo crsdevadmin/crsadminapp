@@ -1,7 +1,6 @@
 /**
-* Template Name: Presento
-* Updated: Jul 27 2023 with Bootstrap v5.3.1
-* Template URL: https://bootstrapmade.com/presento-bootstrap-corporate-template/
+* Template Name: Vesperr - v4.10.0
+* Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
@@ -69,7 +68,7 @@
     let offset = header.offsetHeight
 
     if (!header.classList.contains('header-scrolled')) {
-      offset -= 16
+      offset -= 20
     }
 
     let elementPos = select(el).offsetTop
@@ -158,11 +157,12 @@
       }
     }
   });
+
   /**
-   * Clients Slider
+   * Testimonials slider
    */
-  new Swiper('.clients-slider', {
-    speed: 400,
+  new Swiper('.testimonials-slider', {
+    speed: 600,
     loop: true,
     autoplay: {
       delay: 5000,
@@ -176,23 +176,33 @@
     },
     breakpoints: {
       320: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+
+      1200: {
         slidesPerView: 2,
-        spaceBetween: 40
-      },
-      480: {
-        slidesPerView: 3,
-        spaceBetween: 60
-      },
-      640: {
-        slidesPerView: 4,
-        spaceBetween: 80
-      },
-      992: {
-        slidesPerView: 6,
-        spaceBetween: 120
+        spaceBetween: 20
       }
     }
   });
+/**
+   * Testimonials slider
+   */
+  new Swiper('.events-slider', {
+    speed: 600,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    }
+   });
 
   /**
    * Porfolio isotope and filter
@@ -250,35 +260,6 @@
   });
 
   /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      }
-    }
-  });
-
-  /**
    * Animation on scroll
    */
   window.addEventListener('load', () => {
@@ -294,5 +275,4 @@
    * Initiate Pure Counter 
    */
   new PureCounter();
-
 })()
