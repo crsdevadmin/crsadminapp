@@ -54,7 +54,7 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#about">Services</a></li>
 <!--<li><a class="nav-link scrollto" href="#services">Services</a></li>-->
 	 <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
 	    </ul>
@@ -103,7 +103,7 @@
     </section><!-- End Clients Section -->
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about section-bg">
+    <section id="Services" class="Services section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="row no-gutters">
@@ -117,7 +117,7 @@ With a team of experts, we're here to guide you through every step of the journe
 Welcome to Cloud Ring Solutions, where innovation meets excellence in customer engagement."
 
 			 </p>
-              <a href="#" class="about-btn"><span>About us</span> <i class="bx bx-chevron-right"></i></a>
+              <a href="#" class="about-btn"><span>Services</span> <i class="bx bx-chevron-right"></i></a>
             </div>
           </div>
           <div class="col-xl-7 d-flex align-items-stretch">
@@ -933,7 +933,7 @@ Welcome to Cloud Ring Solutions, where innovation meets excellence in customer e
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Cloud Ring Solutions<span>.</span></h3>
             <p>
-              Navalur<br>
+              8735, DUNWOODY PLACE STEN, ATLANTA GEORGIA 30350 USA<br>
               <br>
               <strong>Phone:</strong> +91 98414 79475<br>
               <strong>Email:</strong> Marketing@cloudringsolutions.com<br>
