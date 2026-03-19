@@ -1,1017 +1,1016 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cloud Ring Solutions — AI-Powered Contact Center Intelligence</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDAgMjQwIiB3aWR0aD0iMjQwIiBoZWlnaHQ9IjI0MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdhIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBlYTVlOSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3YzNhZWQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdiIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzM4YmRmOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhNzhiZmEiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJnbG93Ij4KICAgICAgPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMyIgcmVzdWx0PSJjb2xvcmVkQmx1ciIvPgogICAgICA8ZmVNZXJnZT48ZmVNZXJnZU5vZGUgaW49ImNvbG9yZWRCbHVyIi8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPgogICAgPC9maWx0ZXI+CiAgPC9kZWZzPgogIDwhLS0gQmFja2dyb3VuZCByb3VuZGVkIHNxdWFyZSAtLT4KICA8cmVjdCB4PSIxMCIgeT0iMTAiIHdpZHRoPSIyMjAiIGhlaWdodD0iMjIwIiByeD0iNDgiIGZpbGw9IiMwMzA3MTIiLz4KICA8IS0tIE91dGVyIGdsb3cgcmluZyAtLT4KICA8Y2lyY2xlIGN4PSIxMjAiIGN5PSIxMjAiIHI9Ijg4IiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ2EpIiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9IjAuMjUiLz4KICA8IS0tIFNpZ25hbCBhcmNzIC0gUklHSFQgc2lkZSAob3V0Ym91bmQpIC0tPgogIDxwYXRoIGQ9Ik0xMjAsNDQgQTc2LDc2IDAgMCwxIDE5NiwxMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnYSkiIHN0cm9rZS13aWR0aD0iOSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWx0ZXI9InVybCgjZ2xvdykiLz4KICA8cGF0aCBkPSJNMTIwLDY0IEE1Niw1NiAwIDAsMSAxNzYsMTIwIiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ2IpIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgb3BhY2l0eT0iMC44NSIvPgogIDxwYXRoIGQ9Ik0xMjAsODQgQTM2LDM2IDAgMCwxIDE1NiwxMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBlYTVlOSIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9IjAuNyIvPgogIDwhLS0gU2lnbmFsIGFyY3MgLSBMRUZUIHNpZGUgKGluYm91bmQpIC0tPgogIDxwYXRoIGQ9Ik0xMjAsMTk2IEE3Niw3NiAwIDAsMSA0NCwxMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNnYSkiIHN0cm9rZS13aWR0aD0iOSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBmaWx0ZXI9InVybCgjZ2xvdykiLz4KICA8cGF0aCBkPSJNMTIwLDE3NiBBNTYsNTYgMCAwLDEgNjQsMTIwIiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjZ2IpIiBzdHJva2Utd2lkdGg9IjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgb3BhY2l0eT0iMC44NSIvPgogIDxwYXRoIGQ9Ik0xMjAsMTU2IEEzNiwzNiAwIDAsMSA4NCwxMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2E3OGJmYSIgc3Ryb2tlLXdpZHRoPSI1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9IjAuNyIvPgogIDwhLS0gQ2VudGVyIGNvcmUgLS0+CiAgPGNpcmNsZSBjeD0iMTIwIiBjeT0iMTIwIiByPSIyMiIgZmlsbD0idXJsKCNnYSkiIGZpbHRlcj0idXJsKCNnbG93KSIvPgogIDxjaXJjbGUgY3g9IjEyMCIgY3k9IjEyMCIgcj0iMTMiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjk1Ii8+CiAgPGNpcmNsZSBjeD0iMTIwIiBjeT0iMTIwIiByPSI2IiBmaWxsPSJ1cmwoI2dhKSIvPgogIDwhLS0gRG90IGFjY2VudHMgb24gYXJjIGVuZHMgLS0+CiAgPGNpcmNsZSBjeD0iMTk2IiBjeT0iMTIwIiByPSI1IiBmaWxsPSIjMGVhNWU5IiBvcGFjaXR5PSIwLjgiLz4KICA8Y2lyY2xlIGN4PSI0NCIgY3k9IjEyMCIgcj0iNSIgZmlsbD0iI2E3OGJmYSIgb3BhY2l0eT0iMC44Ii8+CiAgPGNpcmNsZSBjeD0iMTIwIiBjeT0iNDQiIHI9IjQiIGZpbGw9IiMzOGJkZjgiIG9wYWNpdHk9IjAuNiIvPgogIDxjaXJjbGUgY3g9IjEyMCIgY3k9IjE5NiIgcj0iNCIgZmlsbD0iI2E3OGJmYSIgb3BhY2l0eT0iMC42Ii8+Cjwvc3ZnPg==">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+:root{
+  --ink:#030712;--ink2:#070e1a;--navy:#0a1628;--deep:#0d1f3c;
+  --sky:#0ea5e9;--skyd:rgba(14,165,233,0.12);--skyg:rgba(14,165,233,0.35);
+  --vio:#7c3aed;--viod:rgba(124,58,237,0.12);--viog:rgba(124,58,237,0.3);
+  --jade:#10b981;--amber:#f59e0b;--rose:#f43f5e;
+  --w:#f8fafc;--wd:rgba(248,250,252,0.68);--wg:rgba(248,250,252,0.06);--wg2:rgba(248,250,252,0.03);
+  --br:rgba(248,250,252,0.07);--brb:rgba(14,165,233,0.22);--brv:rgba(124,58,237,0.22);
+  --mt:rgba(148,163,184,0.78);
+}
+body{font-family:'Instrument Sans',sans-serif;background:var(--ink);color:var(--w);overflow-x:hidden;line-height:1.6;}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(14,165,233,0.022) 1px,transparent 1px),linear-gradient(90deg,rgba(14,165,233,0.022) 1px,transparent 1px);background-size:64px 64px;pointer-events:none;z-index:0;}
+nav{position:sticky;top:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:0.9rem 3rem;background:rgba(3,7,18,0.94);backdrop-filter:blur(20px);border-bottom:1px solid var(--br);}
+.nbrand{display:flex;align-items:center;gap:0.75rem;text-decoration:none;}
+.nbrand-text{display:flex;flex-direction:column;}
+.nbrand-name{font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;color:var(--w);letter-spacing:-0.01em;line-height:1;}
+.nbrand-name span{color:var(--sky);}
+.nbrand-tag{font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:var(--mt);letter-spacing:0.1em;margin-top:2px;}
+.nlinks{display:flex;gap:1.8rem;list-style:none;}
+.nlinks a{font-size:0.78rem;font-weight:500;color:var(--mt);text-decoration:none;transition:color 0.2s;}
+.nlinks a:hover{color:var(--w);}
+.nact{display:flex;gap:0.5rem;}
+.bg{padding:0.42rem 1rem;border:1px solid var(--brb);color:var(--sky);font-size:0.72rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;text-decoration:none;border-radius:4px;transition:all 0.2s;}
+.bg:hover{background:var(--skyd);}
+.bs{padding:0.42rem 1.1rem;background:var(--sky);color:var(--ink);font-size:0.72rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;text-decoration:none;border-radius:4px;box-shadow:0 0 14px rgba(14,165,233,0.3);transition:all 0.2s;}
+.bs:hover{background:#38bdf8;box-shadow:0 0 24px rgba(14,165,233,0.5);}
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:6rem 3rem 4rem;}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;}
+.o1{width:600px;height:600px;background:radial-gradient(circle,rgba(14,165,233,0.09),transparent 70%);top:-150px;right:-80px;animation:fl 14s ease-in-out infinite;}
+.o2{width:400px;height:400px;background:radial-gradient(circle,rgba(124,58,237,0.08),transparent 70%);bottom:-100px;left:-60px;animation:fl 18s ease-in-out infinite reverse;}
+@keyframes fl{0%,100%{transform:translate(0,0)}50%{transform:translate(20px,-28px)}}
+.hw{position:relative;z-index:1;max-width:1300px;margin:0 auto;width:100%;display:grid;grid-template-columns:55% 45%;gap:4.5rem;align-items:center;}
+.pill{display:inline-flex;align-items:center;gap:0.42rem;padding:0.28rem 0.82rem;background:var(--skyd);border:1px solid var(--brb);border-radius:100px;font-family:'JetBrains Mono',monospace;font-size:0.67rem;color:var(--sky);letter-spacing:0.07em;margin-bottom:1.5rem;}
+.pd{width:5px;height:5px;border-radius:50%;background:var(--sky);animation:bk 1.5s ease-in-out infinite;}
+@keyframes bk{0%,100%{opacity:1}50%{opacity:0.2}}
+h1.hero-h{font-family:'Syne',sans-serif;font-size:clamp(2.6rem,4.8vw,4.8rem);font-weight:800;line-height:1.02;letter-spacing:-0.025em;margin-bottom:1.3rem;}
+.l1{display:block;color:var(--w);}
+.l2{display:block;color:var(--sky);}
+.l3{display:block;background:linear-gradient(90deg,var(--sky),var(--vio));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.hp{font-size:0.97rem;line-height:1.85;color:var(--wd);max-width:500px;margin-bottom:2rem;}
+.hbtns{display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:2.8rem;}
+.bpri{display:inline-flex;align-items:center;gap:0.45rem;padding:0.78rem 1.7rem;background:linear-gradient(135deg,var(--sky),#0284c7);color:var(--ink);font-family:'Syne',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.05em;text-decoration:none;border-radius:5px;box-shadow:0 0 26px rgba(14,165,233,0.32);transition:all 0.22s;}
+.bpri:hover{transform:translateY(-2px);box-shadow:0 0 42px rgba(14,165,233,0.55);}
+.bout{display:inline-flex;align-items:center;gap:0.45rem;padding:0.78rem 1.7rem;border:1px solid var(--br);color:var(--w);font-family:'Syne',sans-serif;font-size:0.8rem;font-weight:600;letter-spacing:0.05em;text-decoration:none;border-radius:5px;transition:all 0.22s;}
+.bout:hover{border-color:var(--sky);background:var(--skyd);}
+.hst{display:flex;gap:2.2rem;padding-top:1.8rem;border-top:1px solid var(--br);}
+.hsn{font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;color:var(--sky);}
+.hsl{font-size:0.67rem;color:var(--mt);text-transform:uppercase;letter-spacing:0.07em;margin-top:0.15rem;}
+.ucard{background:var(--navy);border:1px solid var(--brb);border-radius:14px;padding:1.3rem;box-shadow:0 0 60px rgba(14,165,233,0.07),0 36px 72px rgba(0,0,0,0.5);position:relative;overflow:hidden;}
+.ucard::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--sky),transparent);}
+.utop{display:flex;align-items:center;gap:0.38rem;margin-bottom:0.9rem;}
+.ud{width:8px;height:8px;border-radius:50%;}
+.ur{background:#ff5f57;}.uy{background:#ffbd2e;}.ug{background:#28c940;}
+.utitle{font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:var(--mt);margin-left:auto;}
+.ugrid{display:grid;grid-template-columns:155px 1fr;gap:0.7rem;}
+.usb{background:var(--deep);border-radius:8px;padding:0.75rem;display:flex;flex-direction:column;gap:0.3rem;}
+.un{display:flex;align-items:center;gap:0.45rem;padding:0.38rem 0.55rem;border-radius:5px;font-size:0.63rem;color:var(--mt);}
+.un.on{background:var(--skyd);color:var(--sky);border:1px solid var(--brb);}
+.ubody{display:flex;flex-direction:column;gap:0.6rem;}
+.krow{display:grid;grid-template-columns:repeat(3,1fr);gap:0.45rem;}
+.kpi{background:var(--deep);border-radius:6px;padding:0.65rem;border:1px solid var(--br);}
+.kl{font-size:0.55rem;color:var(--mt);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.22rem;}
+.kv{font-family:'Syne',sans-serif;font-size:1.15rem;font-weight:800;}
+.kv.b{color:var(--sky);}.kv.g{color:var(--jade);}.kv.v{color:#a78bfa;}
+.cbx{background:var(--deep);border-radius:6px;padding:0.65rem;border:1px solid var(--br);}
+.cbl{font-size:0.55rem;color:var(--mt);margin-bottom:0.45rem;}
+.bars{display:flex;align-items:flex-end;gap:2.5px;height:40px;}
+.bar{flex:1;border-radius:2px 2px 0 0;background:var(--skyd);border:1px solid rgba(14,165,233,0.18);transition:height 0.6s ease;}
+.ql{display:flex;flex-direction:column;gap:0.3rem;}
+.qi{display:flex;align-items:center;gap:0.45rem;background:var(--deep);border-radius:4px;padding:0.35rem 0.55rem;border:1px solid var(--br);font-size:0.6rem;}
+.qav{width:17px;height:17px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.5rem;font-weight:700;}
+.qst{margin-left:auto;padding:0.1rem 0.32rem;border-radius:100px;font-size:0.52rem;font-weight:600;}
+.s-ai{background:rgba(124,58,237,0.14);color:#a78bfa;border:1px solid var(--brv);}
+.s-lv{background:rgba(16,185,129,0.12);color:var(--jade);border:1px solid rgba(16,185,129,0.26);}
+.s-wt{background:rgba(245,158,11,0.12);color:var(--amber);border:1px solid rgba(245,158,11,0.26);}
+.fchip{position:absolute;background:var(--navy);border:1px solid var(--brb);border-radius:8px;padding:0.55rem 0.85rem;box-shadow:0 6px 22px rgba(0,0,0,0.4);font-size:0.65rem;}
+.fchip.tr{top:-14px;right:-22px;}.fchip.bl{bottom:-14px;left:-22px;}
+.fcl{font-size:0.56rem;color:var(--mt);margin-bottom:0.12rem;}
+.fcv{font-family:'Syne',sans-serif;font-weight:800;color:var(--sky);}
+.alive{display:inline-flex;align-items:center;gap:0.32rem;color:var(--jade);font-size:0.6rem;}
+.alive::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--jade);animation:bk 1.2s infinite;}
+.mq{padding:1.8rem 0;border-top:1px solid var(--br);border-bottom:1px solid var(--br);background:var(--wg2);overflow:hidden;}
+.mql{text-align:center;font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--mt);margin-bottom:1rem;}
+.mqt{display:flex;gap:1.8rem;animation:mqan 22s linear infinite;width:max-content;}
+@keyframes mqan{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.mc{display:flex;align-items:center;gap:0.38rem;padding:0.38rem 0.9rem;border:1px solid var(--br);border-radius:4px;font-family:'Syne',sans-serif;font-size:0.73rem;font-weight:600;color:var(--mt);white-space:nowrap;}
+.sec{padding:5.5rem 3rem;position:relative;z-index:1;}
+.si{max-width:1300px;margin:0 auto;}
+.ey{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--sky);margin-bottom:0.75rem;display:flex;align-items:center;gap:0.55rem;}
+.ey::before{content:'';width:18px;height:1px;background:var(--sky);}
+.sh{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:800;line-height:1.1;letter-spacing:-0.02em;}
+.sh .ac{color:var(--sky);}.sh .vi{color:#a78bfa;}
+.sp{font-size:0.93rem;line-height:1.82;color:var(--wd);max-width:520px;margin-top:0.8rem;}
+.svgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--br);border:1px solid var(--br);margin-top:3rem;}
+.sv{background:var(--ink);padding:2rem;position:relative;overflow:hidden;transition:background 0.3s;}
+.sv::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--sky),transparent);transform:scaleX(0);transform-origin:left;transition:transform 0.4s;}
+.sv:hover::after{transform:scaleX(1);}.sv:hover{background:var(--wg);}
+.sv-ic{width:42px;height:42px;border-radius:9px;background:var(--skyd);border:1px solid var(--brb);display:flex;align-items:center;justify-content:center;font-size:1.15rem;margin-bottom:1.1rem;}
+.sv h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.55rem;}
+.sv p{font-size:0.82rem;line-height:1.75;color:var(--mt);}
+.tags{display:flex;gap:0.3rem;flex-wrap:wrap;margin-top:0.9rem;}
+.tag{padding:0.16rem 0.45rem;border-radius:3px;font-family:'JetBrains Mono',monospace;font-size:0.6rem;font-weight:500;}
+.tb{background:var(--skyd);color:var(--sky);border:1px solid var(--brb);}
+.tv{background:var(--viod);color:#a78bfa;border:1px solid var(--brv);}
+.tg{background:rgba(16,185,129,0.1);color:var(--jade);border:1px solid rgba(16,185,129,0.22);}
+.ta{background:rgba(245,158,11,0.1);color:var(--amber);border:1px solid rgba(245,158,11,0.22);}
+/* TRAINING */
+.trsec{background:linear-gradient(135deg,var(--ink2),var(--navy),var(--ink2));position:relative;overflow:hidden;}
+.trsec::before{content:'';position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,0.06),transparent 65%);top:-200px;right:-200px;pointer-events:none;}
+.trgrid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-top:1rem;}
+.tsteps{display:flex;flex-direction:column;margin-top:2rem;}
+.tstep{display:flex;gap:1.2rem;padding:1.3rem 0;border-bottom:1px solid var(--br);}
+.tstep:last-child{border-bottom:none;}
+.tnum{width:34px;height:34px;border-radius:50%;background:var(--viod);border:1px solid var(--brv);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:0.75rem;color:#a78bfa;flex-shrink:0;margin-top:0.1rem;}
+.tbody h4{font-family:'Syne',sans-serif;font-size:0.93rem;font-weight:700;margin-bottom:0.32rem;}
+.tbody p{font-size:0.81rem;line-height:1.72;color:var(--mt);}
+.ttag{display:inline-flex;align-items:center;gap:0.3rem;padding:0.14rem 0.44rem;background:var(--viod);border:1px solid var(--brv);border-radius:3px;font-family:'JetBrains Mono',monospace;font-size:0.57rem;color:#a78bfa;margin-top:0.45rem;}
+.cert-card{background:var(--deep);border:1px solid var(--brv);border-radius:12px;padding:1.4rem;position:relative;overflow:hidden;}
+.cert-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,#a78bfa,transparent);}
+.chdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.1rem;}
+.ctitle{font-family:'Syne',sans-serif;font-size:0.8rem;font-weight:700;color:#a78bfa;}
+.cbdg{padding:0.2rem 0.55rem;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.22);border-radius:3px;font-family:'JetBrains Mono',monospace;font-size:0.56rem;color:var(--jade);}
+.clist{display:flex;flex-direction:column;gap:0.55rem;}
+.course{background:var(--ink2);border-radius:8px;padding:0.8rem;border:1px solid var(--br);}
+.ctop{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;}
+.cname{font-size:0.77rem;font-weight:600;}
+.clvl{font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:var(--mt);}
+.prog{height:4px;background:var(--br);border-radius:2px;overflow:hidden;}
+.pf{height:100%;border-radius:2px;}
+.pb{background:linear-gradient(90deg,var(--sky),#38bdf8);}
+.pv{background:linear-gradient(90deg,var(--vio),#a78bfa);}
+.pg{background:linear-gradient(90deg,var(--jade),#34d399);}
+.cstats{display:grid;grid-template-columns:repeat(3,1fr);gap:0.55rem;margin-top:1rem;}
+.cs{background:var(--ink2);border-radius:7px;padding:0.65rem;text-align:center;}
+.csn{font-family:'Syne',sans-serif;font-size:1.25rem;font-weight:800;color:#a78bfa;}
+.csl{font-size:0.57rem;color:var(--mt);text-transform:uppercase;letter-spacing:0.06em;margin-top:0.1rem;}
+/* MANAGED */
+.mssec{background:var(--ink);}
+.msgrid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.msvis{background:var(--deep);border:1px solid var(--brb);border-radius:12px;padding:1.4rem;position:relative;overflow:hidden;}
+.msvis::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--sky),transparent);}
+.mshdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.9rem;}
+.mstitle{font-family:'Syne',sans-serif;font-size:0.78rem;font-weight:700;color:var(--sky);}
+.mslive{display:flex;align-items:center;gap:0.28rem;font-family:'JetBrains Mono',monospace;font-size:0.56rem;color:var(--jade);}
+.mslive::before{content:'';width:4.5px;height:4.5px;border-radius:50%;background:var(--jade);animation:bk 1.1s infinite;}
+.msmet{display:grid;grid-template-columns:repeat(2,1fr);gap:0.5rem;margin-bottom:0.75rem;}
+.mm{background:var(--ink2);border-radius:7px;padding:0.65rem;border:1px solid var(--br);}
+.mmn{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--sky);}
+.mml{font-size:0.57rem;color:var(--mt);text-transform:uppercase;letter-spacing:0.05em;}
+.incl{display:flex;flex-direction:column;gap:0.32rem;}
+.inc{display:flex;align-items:center;gap:0.48rem;background:var(--ink2);border-radius:6px;padding:0.42rem 0.62rem;border:1px solid var(--br);font-size:0.6rem;}
+.idot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+.iok{background:var(--jade);}.iwarn{background:var(--amber);}
+.itime{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:0.54rem;color:var(--mt);}
+.msf{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-top:2rem;}
+.msfcard{padding:1.1rem;background:var(--wg2);border:1px solid var(--br);border-radius:8px;transition:all 0.3s;}
+.msfcard:hover{border-color:var(--brb);background:var(--skyd);}
+.msfcard h5{font-family:'Syne',sans-serif;font-size:0.82rem;font-weight:700;margin:0.35rem 0 0.22rem;}
+.msfcard p{font-size:0.76rem;line-height:1.6;color:var(--mt);}
+/* AUTOMATION */
+.ausec{background:var(--ink2);position:relative;overflow:hidden;}
+.ausec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(14,165,233,0.04),transparent 60%);pointer-events:none;}
+.auhead{text-align:center;max-width:640px;margin:0 auto 3rem;}
+.auhead .ey{justify-content:center;}
+.augrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--br);border:1px solid var(--br);}
+.auc{background:var(--ink2);padding:1.8rem;position:relative;overflow:hidden;transition:background 0.3s;}
+.auc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;opacity:0;transition:opacity 0.3s;}
+.auc:nth-child(1)::before{background:linear-gradient(90deg,var(--sky),transparent);}
+.auc:nth-child(2)::before{background:linear-gradient(90deg,#a78bfa,transparent);}
+.auc:nth-child(3)::before{background:linear-gradient(90deg,var(--jade),transparent);}
+.auc:nth-child(4)::before{background:linear-gradient(90deg,var(--amber),transparent);}
+.auc:hover::before{opacity:1;}.auc:hover{background:var(--wg);}
+.aun{font-family:'Syne',sans-serif;font-size:2.8rem;font-weight:800;line-height:1;margin-bottom:0.25rem;opacity:0.1;}
+.aun.b{color:var(--sky);}.aun.v{color:#a78bfa;}.aun.g{color:var(--jade);}.aun.a{color:var(--amber);}
+.auic{font-size:1.55rem;margin-bottom:0.75rem;}
+.auc h3{font-family:'Syne',sans-serif;font-size:0.97rem;font-weight:700;margin-bottom:0.45rem;}
+.auc p{font-size:0.8rem;line-height:1.72;color:var(--mt);}
+.auflow{margin-top:2.8rem;background:var(--wg2);border:1px solid var(--br);border-radius:12px;padding:1.8rem;}
+.aftitle{font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--mt);margin-bottom:1.4rem;text-align:center;}
+.afrow{display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:nowrap;}
+.afnode{background:var(--navy);border:1px solid var(--br);border-radius:8px;padding:0.6rem 0.85rem;text-align:center;flex:1;max-width:150px;}
+.afnic{font-size:1rem;margin-bottom:0.2rem;}
+.afnl{font-size:0.67rem;font-weight:600;font-family:'Syne',sans-serif;}
+.afns{font-size:0.56rem;color:var(--mt);margin-top:0.08rem;}
+.afnode.sky{border-color:var(--brb);background:var(--skyd);}
+.afnode.vi{border-color:var(--brv);background:var(--viod);}
+.afnode.jd{border-color:rgba(16,185,129,0.22);background:rgba(16,185,129,0.07);}
+.afarr{flex-shrink:0;width:28px;text-align:center;color:var(--sky);font-size:0.85rem;opacity:0.55;}
+/* AI SECTION */
+.aisec{background:var(--ink);}
+.aistrip{background:linear-gradient(135deg,rgba(14,165,233,0.05),rgba(124,58,237,0.05));border:1px solid var(--br);border-radius:16px;padding:2.8rem;margin-bottom:2.8rem;position:relative;overflow:hidden;}
+.aistrip::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--sky),var(--vio),transparent);}
+.aisi{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.chatmock{background:var(--navy);border:1px solid var(--br);border-radius:12px;padding:1.2rem;display:flex;flex-direction:column;gap:0.5rem;}
+.chdr{display:flex;align-items:center;gap:0.58rem;padding-bottom:0.75rem;border-bottom:1px solid var(--br);margin-bottom:0.1rem;}
+.chav{width:27px;height:27px;border-radius:50%;background:linear-gradient(135deg,var(--sky),var(--vio));display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:700;color:#fff;}
+.chname{font-family:'Syne',sans-serif;font-size:0.78rem;font-weight:700;}
+.chstat{font-size:0.56rem;color:var(--jade);margin-left:auto;}
+.bub{border-radius:8px;padding:0.58rem 0.78rem;font-size:0.68rem;line-height:1.55;max-width:92%;}
+.bub.u{background:var(--skyd);border:1px solid var(--brb);color:rgba(248,250,252,0.88);}
+.bub.a{background:var(--wg2);border:1px solid var(--br);color:rgba(248,250,252,0.82);}
+.bub.a strong{color:var(--sky);}
+.brow{display:flex;}.brow.r{justify-content:flex-end;}
+.tyd{width:5px;height:5px;border-radius:50%;background:var(--mt);}
+.tyd:nth-child(1){animation:ty 1.2s 0s ease-in-out infinite;}
+.tyd:nth-child(2){animation:ty 1.2s 0.2s ease-in-out infinite;}
+.tyd:nth-child(3){animation:ty 1.2s 0.4s ease-in-out infinite;}
+@keyframes ty{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-5px)}}
+.aiflist{display:flex;flex-direction:column;gap:0.95rem;}
+.aif{display:flex;align-items:flex-start;gap:0.85rem;}
+.aific{width:37px;height:37px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.95rem;flex-shrink:0;}
+.aific.b{background:var(--skyd);border:1px solid var(--brb);}
+.aific.v{background:var(--viod);border:1px solid var(--brv);}
+.aific.g{background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.22);}
+.aifb h4{font-family:'Syne',sans-serif;font-size:0.87rem;font-weight:700;margin-bottom:0.2rem;}
+.aifb p{font-size:0.78rem;line-height:1.65;color:var(--mt);}
+.aicards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;}
+.aic{background:var(--wg2);border:1px solid var(--br);border-radius:11px;padding:1.65rem;position:relative;overflow:hidden;transition:all 0.3s;}
+.aic::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:70%;height:1px;background:linear-gradient(90deg,transparent,var(--sky),transparent);opacity:0;transition:opacity 0.3s;}
+.aic:hover{border-color:var(--brb);background:rgba(14,165,233,0.04);transform:translateY(-3px);}.aic:hover::before{opacity:1;}
+.aic-ic{font-size:1.55rem;margin-bottom:0.82rem;}
+.aic h3{font-family:'Syne',sans-serif;font-size:0.97rem;font-weight:700;margin-bottom:0.45rem;}
+.aic p{font-size:0.8rem;line-height:1.72;color:var(--mt);}
+/* PRODUCTS */
+.prodsec{background:var(--ink2);}
+.pblock{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:center;padding:4rem 0;border-bottom:1px solid var(--br);}
+.pblock:last-child{border-bottom:none;}
+.pblock.flip{direction:rtl;}.pblock.flip>*{direction:ltr;}
+.ptag{display:inline-flex;align-items:center;gap:0.38rem;padding:0.24rem 0.65rem;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:0.62rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;margin-bottom:0.88rem;}
+.pt-b{background:rgba(14,165,233,0.1);color:var(--sky);border:1px solid var(--brb);}
+.pt-v{background:var(--viod);color:#a78bfa;border:1px solid var(--brv);}
+.ph{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,2.6vw,2.5rem);font-weight:800;letter-spacing:-0.02em;line-height:1.08;margin-bottom:0.85rem;}
+.psub{font-size:0.91rem;line-height:1.82;color:var(--wd);margin-bottom:1.6rem;}
+.flist{display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1.6rem;}
+.fi{display:flex;align-items:flex-start;gap:0.62rem;font-size:0.83rem;line-height:1.62;}
+.fck{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.52rem;flex-shrink:0;margin-top:2px;}
+.ck-b{background:var(--skyd);color:var(--sky);border:1px solid var(--brb);}
+.ck-v{background:var(--viod);color:#a78bfa;border:1px solid var(--brv);}
+.ft{color:var(--wd);}.ft strong{color:var(--w);}
+.pbtn{display:inline-flex;align-items:center;gap:0.45rem;padding:0.7rem 1.5rem;border-radius:5px;font-family:'Syne',sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;text-decoration:none;transition:all 0.22s;}
+.pb-b{background:var(--sky);color:var(--ink);box-shadow:0 0 18px rgba(14,165,233,0.26);}.pb-b:hover{box-shadow:0 0 32px rgba(14,165,233,0.48);transform:translateY(-2px);}
+.pb-v{background:var(--vio);color:#fff;box-shadow:0 0 18px rgba(124,58,237,0.26);}.pb-v:hover{box-shadow:0 0 32px rgba(124,58,237,0.48);transform:translateY(-2px);}
+.apmock{background:var(--navy);border:1px solid var(--brb);border-radius:13px;padding:1.3rem;box-shadow:0 0 50px rgba(14,165,233,0.07),0 28px 65px rgba(0,0,0,0.48);position:relative;overflow:hidden;}
+.apmock::after{content:'';position:absolute;inset:0;border-radius:13px;background:radial-gradient(ellipse at 100% 0%,rgba(14,165,233,0.05),transparent 55%);pointer-events:none;}
+.mhdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.88rem;padding-bottom:0.62rem;border-bottom:1px solid var(--br);}
+.mpn{font-family:'Syne',sans-serif;font-size:0.78rem;font-weight:700;}
+.mpn.b{color:var(--sky);}.mpn.v{color:#a78bfa;}
+.mlv{display:flex;align-items:center;gap:0.27rem;font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:var(--jade);}
+.mlv::before{content:'';width:4.5px;height:4.5px;border-radius:50%;background:var(--jade);animation:bk 1.1s infinite;}
+.agl{display:grid;grid-template-columns:1fr 140px;gap:0.62rem;}
+.agm{display:flex;flex-direction:column;gap:0.48rem;}
+.ccrd{background:linear-gradient(135deg,rgba(14,165,233,0.08),rgba(14,165,233,0.02));border:1px solid var(--brb);border-radius:8px;padding:0.85rem;}
+.cct{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.52rem;}
+.cn{font-family:'Syne',sans-serif;font-weight:700;font-size:0.82rem;}
+.cd{color:var(--mt);font-size:0.56rem;margin-top:0.07rem;}
+.ctm{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--sky);}
+.aibx{background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.17);border-radius:7px;padding:0.57rem;margin-top:0.18rem;}
+.ail{font-size:0.54rem;color:var(--jade);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.27rem;font-family:'JetBrains Mono',monospace;}
+.ait{font-size:0.62rem;color:rgba(248,250,252,0.76);line-height:1.5;}
+.crmbx{background:var(--deep);border-radius:7px;padding:0.6rem;}
+.crml{font-size:0.54rem;color:var(--mt);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.28rem;}
+.crmr{display:flex;justify-content:space-between;font-size:0.59rem;padding:0.17rem 0;border-bottom:1px solid var(--br);}
+.crmr:last-child{border-bottom:none;}
+.crk{color:var(--mt);}.crv{color:var(--w);font-weight:500;}
+.spc{display:flex;flex-direction:column;gap:0.37rem;}
+.spl{font-size:0.54rem;color:var(--mt);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.17rem;}
+.agr{background:var(--deep);border-radius:5px;padding:0.37rem 0.47rem;display:flex;align-items:center;gap:0.32rem;font-size:0.58rem;}
+.agd{width:5px;height:5px;border-radius:50%;flex-shrink:0;}
+.vdmock{background:linear-gradient(135deg,#0d0a1e,#130d2e);border:1px solid rgba(124,58,237,0.26);border-radius:13px;padding:1.3rem;box-shadow:0 0 50px rgba(124,58,237,0.07),0 28px 65px rgba(0,0,0,0.48);position:relative;overflow:hidden;}
+.vdmock::after{content:'';position:absolute;inset:0;border-radius:13px;background:radial-gradient(ellipse at 0% 100%,rgba(124,58,237,0.07),transparent 55%);pointer-events:none;}
+.vdl{display:grid;grid-template-columns:128px 1fr;gap:0.62rem;}
+.vdp{display:flex;flex-direction:column;gap:0.4rem;}
+.vds{background:rgba(124,58,237,0.07);border:1px solid rgba(124,58,237,0.17);border-radius:7px;padding:0.57rem;}
+.vdn{font-family:'Syne',sans-serif;font-size:1.22rem;font-weight:800;color:#a78bfa;}
+.vdll{font-size:0.54rem;color:var(--mt);text-transform:uppercase;letter-spacing:0.05em;}
+.vdr{display:flex;flex-direction:column;gap:0.5rem;}
+.ivrb{background:rgba(124,58,237,0.05);border:1px solid rgba(124,58,237,0.14);border-radius:7px;padding:0.63rem;}
+.ivrt{font-size:0.55rem;color:#a78bfa;text-transform:uppercase;letter-spacing:0.09em;margin-bottom:0.43rem;font-family:'JetBrains Mono',monospace;}
+.ivrf{display:flex;flex-direction:column;gap:0.22rem;}
+.ivn{display:flex;align-items:center;gap:0.32rem;background:rgba(124,58,237,0.09);border-radius:4px;padding:0.25rem 0.42rem;font-size:0.58rem;color:rgba(248,250,252,0.7);border-left:2px solid var(--vio);}
+.ivn.ai{border-left-color:var(--jade);background:rgba(16,185,129,0.05);}
+.chbox{background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.13);border-radius:7px;padding:0.6rem;}
+.chlbl{font-size:0.55rem;color:var(--jade);text-transform:uppercase;letter-spacing:0.09em;margin-bottom:0.37rem;font-family:'JetBrains Mono',monospace;}
+.chbb{background:rgba(124,58,237,0.1);border-radius:4px;padding:0.22rem 0.37rem;font-size:0.58rem;color:rgba(248,250,252,0.76);margin-bottom:0.22rem;}
+.chbb.ai{background:rgba(16,185,129,0.09);}
+.chinp{background:rgba(255,255,255,0.04);border:1px solid var(--br);border-radius:3px;padding:0.17rem 0.32rem;font-size:0.55rem;color:var(--mt);font-family:'JetBrains Mono',monospace;}
+.plgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--br);border:1px solid var(--br);margin-top:2.8rem;}
+.pl{background:var(--ink);padding:1.7rem;text-align:center;transition:background 0.3s;}.pl:hover{background:var(--wg);}
+.plic{font-size:1.85rem;margin-bottom:0.62rem;display:block;}
+.pln{font-family:'Syne',sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:0.28rem;}
+.pld{font-size:0.74rem;color:var(--mt);line-height:1.58;}
+.stswrap{background:var(--navy);border-top:1px solid var(--br);border-bottom:1px solid var(--br);}
+.stsrow{display:grid;grid-template-columns:repeat(4,1fr);}
+.stb{padding:3rem 2rem;border-right:1px solid var(--br);text-align:center;}.stb:last-child{border-right:none;}
+.stn{font-family:'Syne',sans-serif;font-size:2.6rem;font-weight:800;color:var(--sky);line-height:1;}
+.stl{font-size:0.7rem;color:var(--mt);text-transform:uppercase;letter-spacing:0.07em;margin-top:0.37rem;}
+.ctasec{text-align:center;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--ink2),var(--navy),var(--ink2));}
+.ctasec::before{content:'';position:absolute;width:450px;height:450px;border-radius:50%;background:radial-gradient(circle,rgba(14,165,233,0.07),transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);}
+.ctain{position:relative;z-index:1;max-width:620px;margin:0 auto;}
+.ctain h2{font-family:'Syne',sans-serif;font-size:clamp(1.9rem,3.5vw,3rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:0.9rem;}
+.ctain p{font-size:0.95rem;color:var(--wd);line-height:1.82;margin-bottom:2rem;}
+.ctabtns{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;}
+.ctsec{background:var(--ink2);}
+.ctgrid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:start;margin-top:3rem;}
+.cform{display:flex;flex-direction:column;gap:0.82rem;}
+.crow{display:grid;grid-template-columns:1fr 1fr;gap:0.72rem;}
+.cg{display:flex;flex-direction:column;gap:0.3rem;}
+.cg label{font-size:0.64rem;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--mt);font-family:'JetBrains Mono',monospace;}
+.cg input,.cg select,.cg textarea{background:rgba(248,250,252,0.05);border:1px solid var(--br);border-radius:5px;padding:0.67rem 0.87rem;color:var(--w);font-family:'Instrument Sans',sans-serif;font-size:0.83rem;outline:none;transition:border-color 0.2s;width:100%;}
+.cg input:focus,.cg select:focus,.cg textarea:focus{border-color:var(--sky);}
+.cg textarea{min-height:90px;resize:vertical;}
+option{background:#0a1628;}
+.cinfo{display:flex;flex-direction:column;gap:1.3rem;}
+.ci{display:flex;gap:0.82rem;align-items:flex-start;}
+.ciic{width:40px;height:40px;border-radius:8px;background:var(--skyd);border:1px solid var(--brb);display:flex;align-items:center;justify-content:center;font-size:0.92rem;flex-shrink:0;}
+.ci h4{font-family:'Syne',sans-serif;font-size:0.85rem;font-weight:700;margin-bottom:0.1rem;}
+.ci p{font-size:0.79rem;color:var(--mt);}
+.pchips{margin-top:1.7rem;padding:1.15rem;background:var(--wg2);border:1px solid var(--br);border-radius:9px;}
+.pcl{font-size:0.61rem;color:var(--mt);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:0.7rem;font-family:'JetBrains Mono',monospace;}
+.chiprow{display:flex;gap:0.37rem;flex-wrap:wrap;}
+.chip{padding:0.3rem 0.72rem;border-radius:100px;font-size:0.67rem;font-weight:600;font-family:'Syne',sans-serif;}
+.ch-b{background:var(--skyd);color:var(--sky);border:1px solid var(--brb);}
+.ch-v{background:var(--viod);color:#a78bfa;border:1px solid var(--brv);}
+.ch-g{background:rgba(16,185,129,0.1);color:var(--jade);border:1px solid rgba(16,185,129,0.22);}
+footer{background:var(--ink);border-top:1px solid var(--br);padding:3rem 3rem 1.8rem;}
+.ftop{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:3rem;margin-bottom:2.2rem;}
+.fb p{font-size:0.79rem;color:var(--mt);line-height:1.78;margin-top:0.82rem;max-width:260px;}
+.fc h5{font-family:'Syne',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--mt);margin-bottom:0.82rem;}
+.fc a{display:block;font-size:0.77rem;color:var(--mt);text-decoration:none;margin-bottom:0.4rem;transition:color 0.2s;}.fc a:hover{color:var(--sky);}
+.fbot{display:flex;justify-content:space-between;align-items:center;padding-top:1.5rem;border-top:1px solid var(--br);font-size:0.72rem;color:var(--mt);}
+.fbl{display:flex;gap:1.3rem;}.fbl a{color:var(--mt);text-decoration:none;transition:color 0.2s;}.fbl a:hover{color:var(--sky);}
+@media(max-width:1024px){
+  nav{padding:0.85rem 1.5rem;}
+  .nlinks{display:none;}
+  .sec,.hero{padding:4.5rem 1.5rem;}
+  .hw{grid-template-columns:1fr;}
+  .hero-vis{display:none;}
+  .svgrid,.aicards{grid-template-columns:1fr;}
+  .augrid{grid-template-columns:1fr 1fr;}
+  .pblock,.msgrid,.trgrid,.aisi,.ctgrid{grid-template-columns:1fr;gap:2.5rem;}
+  .pblock.flip{direction:ltr;}
+  .plgrid{grid-template-columns:1fr 1fr;}
+  .stsrow{grid-template-columns:1fr 1fr;}
+  .ftop{grid-template-columns:1fr 1fr;gap:2rem;}
+  .crow{grid-template-columns:1fr;}
+  .afrow{flex-wrap:wrap;gap:0.5rem;}
+  .afarr{display:none;}
+  .msf{grid-template-columns:1fr;}
+}
 
-  <title>Cloud Ring Solutions</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+/* ── PHOTO SECTIONS ── */
+.photo-hero-strip {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.photo-hero-strip img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: brightness(0.35) saturate(0.8);
+}
+.photo-hero-strip .overlay {
+  position: relative;
+  z-index: 1;
+  padding: 0 5rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+}
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  margin-top: 3rem;
+}
+.photo-card {
+  position: relative;
+  overflow: hidden;
+  height: 320px;
+}
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.7s ease, filter 0.4s;
+  filter: brightness(0.75) saturate(0.85);
+}
+.photo-card:hover img {
+  transform: scale(1.06);
+  filter: brightness(0.55) saturate(1);
+}
+.photo-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(3,7,18,0.88) 0%, rgba(3,7,18,0.1) 55%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.8rem;
+}
+.photo-card-overlay h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--w);
+  margin-bottom: 0.3rem;
+}
+.photo-card-overlay p {
+  font-size: 0.8rem;
+  color: var(--wd);
+  line-height: 1.55;
+}
+.photo-card.tall { height: 645px; grid-row: span 2; }
+.split-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 480px;
+}
+.split-img {
+  position: relative;
+  overflow: hidden;
+}
+.split-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.65) saturate(0.85);
+  transition: filter 0.4s;
+}
+.split-img:hover img { filter: brightness(0.72) saturate(1); }
+.split-content {
+  padding: 5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.split-content.dark { background: var(--ink2); }
+.split-content.navy { background: var(--navy); }
+@media(max-width:1024px) {
+  .photo-hero-strip .overlay { padding: 0 1.5rem; }
+  .photo-grid { grid-template-columns: 1fr; }
+  .photo-card { height: 260px; }
+  .photo-card.tall { height: 260px; grid-row: span 1; }
+  .split-section { grid-template-columns: 1fr; }
+  .split-img { height: 280px; }
+  .split-content { padding: 3rem 1.5rem; }
+}
 
-  <!-- Favicons -->
-  <link href="assets/img/logo3.png" rel="icon">
-  <link href="assets/img/logo3.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Presento
-  * Updated: Jul 27 2023 with Bootstrap v5.3.1
-  * Template URL: https://bootstrapmade.com/presento-bootstrap-corporate-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+</style>
 </head>
-
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center">
-    <!--  <h1 class="logo me-auto"><a href="index.html">Cloud Ring Solutions<span>.</span></a></h1>-->
-	  <div class="logo me-auto">
-            <a href="index.html"><img src="assets/img/logo3.png" class="img-fluid" alt="" data-aos="zoom-in"></a><h1>Cloud Ring Solutions</h1>
-            <h6 class="blink">Experience what’s inside</h6>
-	</div>
-   
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>-->
-
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">Services</a></li>
-<!--<li><a class="nav-link scrollto" href="#services">Services</a></li>-->
-	 <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-	    </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-	</nav><!-- .navbar -->
-
+<nav>
+  <a href="#home" class="nbrand">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNDAwIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBhMWY0NCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZDJhNWUiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8Y2xpcFBhdGggaWQ9ImNsb3VkLWNsaXAiPgogICAgICA8cGF0aCBkPSJNNTIgMjIwIFE1MiAxNjAgMTA0IDE0OCBRMTA0IDcyIDE3NiA3MiBRMjEyIDcyIDIzMiA5NiBRMjQ4IDYwIDI5MiA2MCBRMzY4IDYwIDM2OCAxMzYgUTQwOCAxMzYgNDA4IDE4OCBRNDA4IDIyOCAzNjggMjI4IFoiLz4KICAgIDwvY2xpcFBhdGg+CiAgPC9kZWZzPgoKICA8IS0tIEJhY2tncm91bmQgcm91bmRlZCBzcXVhcmUgLS0+CiAgPHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI0MDAiIHJ4PSI4MCIgZmlsbD0idXJsKCNiZykiLz4KCiAgPCEtLSBDbG91ZCBzaGFwZSDigJQgc29saWQgbmF2eSBibHVlIC0tPgogIDxwYXRoIGQ9Ik01MiAyMzAgUTUyIDE2NiAxMDggMTUyIFExMDggNzIgMTgwIDcyIFEyMTggNzIgMjM4IDk4IFEyNTQgNjAgMjk4IDYwIFEzNzYgNjAgMzc2IDE0MCBRNDE0IDE0MCA0MTQgMTk0IFE0MTQgMjM2IDM3NCAyNDAgTDY4IDI0MCBaIgogICAgICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMiwgNjApIHNjYWxlKDAuOTMpIgogICAgICAgIGZpbGw9IiMxYTNhNzIiLz4KCiAgPCEtLSBDbG91ZCBzaGFwZSDigJQgc2xpZ2h0bHkgbGlnaHRlciBmb3IgZGVwdGggLS0+CiAgPHBhdGggZD0iTTQ4IDIzOCBRNDggMTY4IDEwNiAxNTIgUTEwNiA2OCAxODAgNjggUTIyMCA2OCAyNDIgOTYgUTI1OCA1NiAzMDIgNTYgUTM4NCA1NiAzODQgMTQwIFE0MjQgMTQwIDQyNCAxOTYgUTQyNCAyNDIgMzgwIDI0NiBMNjQgMjQ2IFoiCiAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwLCA1OCkgc2NhbGUoMC45MikiCiAgICAgICAgZmlsbD0iIzFlNDA4MCIvPgoKICA8IS0tIFBob25lIGhhbmRzZXQg4oCUIHdoaXRlLCBjbGVhbiBwcm9mZXNzaW9uYWwgc2hhcGUgLS0+CiAgPCEtLSBCYXNlZCBvbiBjbGFzc2ljIHRlbGVwaG9uZSByZWNlaXZlciBzaWxob3VldHRlIC0tPgogIDxwYXRoIGQ9IgogICAgTSAxMzggMjMwCiAgICBRIDEzMiAyMDAgMTM4IDE3OAogICAgTCAxNTIgMTUyCiAgICBRIDE1OCAxNDAgMTY4IDE0MAogICAgTCAxODggMTQyCiAgICBRIDIwMiAxNDQgMjAwIDE1OAogICAgTCAxOTYgMTcwCiAgICBRIDE5NCAxODAgMjAyIDE4NgogICAgUSAyMTQgMTk2IDIyNiAyMDIKICAgIFEgMjM2IDIwNiAyNDAgMTk4CiAgICBMIDI0NCAxODYKICAgIFEgMjQ4IDE3NCAyNjIgMTc2CiAgICBMIDI4NCAxODIKICAgIFEgMjk2IDE4NiAyOTQgMjAwCiAgICBMIDI5MCAyMTYKICAgIFEgMjg0IDIzOCAyNjQgMjQyCiAgICBRIDIyOCAyNTAgMTk2IDIzOAogICAgUSAxNjIgMjI2IDEzOCAyMzAKICAgIFoiCiAgICBmaWxsPSJ3aGl0ZSIKICAgIG9wYWNpdHk9IjAuOTYiLz4KCiAgPCEtLSBSaW5nIHdhdmUgYXJjIDEg4oCUIGNsb3Nlciwgc3Ryb25nZXIgYmx1ZSAtLT4KICA8cGF0aCBkPSJNIDMwMCAxNTUgQSA0NiA0NiAwIDAgMSAzMDAgMjQyIgogICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzRkYTZmZiIgc3Ryb2tlLXdpZHRoPSIxNCIKICAgICAgICBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KCiAgPCEtLSBSaW5nIHdhdmUgYXJjIDIg4oCUIGZ1cnRoZXIsIGxpZ2h0ZXIgYmx1ZSAtLT4KICA8cGF0aCBkPSJNIDMyMiAxMzYgQSA3MiA3MiAwIDAgMSAzMjIgMjYyIgogICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzRkYTZmZiIgc3Ryb2tlLXdpZHRoPSIxMCIKICAgICAgICBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9IjAuNSIvPgoKPC9zdmc+" alt="Cloud Ring Solutions Logo" style="width:42px;height:42px;border-radius:9px;display:block;flex-shrink:0;">
+    <div class="nbrand-text">
+      <span class="nbrand-name">Cloud Ring <span>Solutions</span></span>
+      <span class="nbrand-tag">AI · Contact Center · Automation</span>
     </div>
-  </header><!-- End Header -->
+  </a>
+  <ul class="nlinks">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#training">Training</a></li>
+    <li><a href="#managed">Managed</a></li>
+    <li><a href="#automation">Automation</a></li>
+    <li><a href="#agentpro">AgentPro</a></li>
+    <li><a href="#vantage">VantageDial</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nact">
+    <a href="#contact" class="bg">Book Demo</a>
+    <a href="#contact" class="bs">Get Started →</a>
+  </div>
+</nav>
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-
-    <div class="container" data-aos="zoom-out" data-aos-delay="100">
-      <div class="row">
-        <div class="col-xl-6">
-          <h1>Seamless Solutions with Cloud Ring Solutions</h1>
-          <!--<h2>Experience What's Inside</h2>-->
-          <a href="#contact" class="btn-get-started scrollto">Call Us</a>
-        </div>
+<section class="hero" id="home">
+  <div class="orb o1"></div><div class="orb o2"></div>
+  <div class="hw">
+    <div>
+      <div class="pill"><span class="pd"></span>Now Live — AI-Powered Contact Center Suite</div>
+      <h1 class="hero-h">
+        <span class="l1">The Future of</span>
+        <span class="l2">Customer Intelligence</span>
+        <span class="l3">Is Here.</span>
+      </h1>
+      <p class="hp">Cloud Ring Solutions builds next-generation contact center platforms and AI-driven automation — where virtual agents, human expertise, real-time intelligence, and daily process automation converge into one powerful ecosystem.</p>
+      <div class="hbtns">
+        <a href="#agentpro" class="bpri">Explore AgentPro ↗</a>
+        <a href="#automation" class="bout">See AI Automation →</a>
+      </div>
+      <div class="hst">
+        <div><div class="hsn">70%</div><div class="hsl">AI Resolution Rate</div></div>
+        <div><div class="hsn">99.9%</div><div class="hsl">Uptime SLA</div></div>
+        <div><div class="hsn">50ms</div><div class="hsl">AI Response</div></div>
       </div>
     </div>
-
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= Clients Section =======
-    <section id="clients" class="clients">
-      <div class="container" data-aos="zoom-in">
-
-        <div class="clients-slider swiper">
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+    <div class="hero-vis">
+      <div class="fchip tr"><div class="fcl">AI Assist Active</div><div class="alive">Processing intent...</div></div>
+      <div class="ucard">
+        <div class="utop"><div class="ud ur"></div><div class="ud uy"></div><div class="ud ug"></div><div class="utitle">AgentPro — Supervisor Desktop</div></div>
+        <div class="ugrid">
+          <div class="usb">
+            <div class="un on">📊 Dashboard</div>
+            <div class="un">🎧 Live Queue</div>
+            <div class="un">🤖 AI Agents</div>
+            <div class="un">📈 Reports</div>
+            <div class="un">🔗 CRM</div>
+            <div class="un">⚙️ Config</div>
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="ubody">
+            <div class="krow">
+              <div class="kpi"><div class="kl">Live Calls</div><div class="kv b">24</div></div>
+              <div class="kpi"><div class="kl">AI Resolved</div><div class="kv g">68%</div></div>
+              <div class="kpi"><div class="kl">Avg Handle</div><div class="kv v">3:42</div></div>
+            </div>
+            <div class="cbx"><div class="cbl">Call Volume — Live</div><div class="bars" id="bars1"></div></div>
+            <div class="ql">
+              <div class="qi"><div class="qav" style="background:rgba(14,165,233,0.18);color:var(--sky)">AK</div><span>Arjun K. · Billing</span><div class="qst s-ai">🤖 AI</div></div>
+              <div class="qi"><div class="qav" style="background:rgba(16,185,129,0.18);color:var(--jade)">MP</div><span>Maya P. · Support</span><div class="qst s-lv">● Live</div></div>
+              <div class="qi"><div class="qav" style="background:rgba(245,158,11,0.18);color:var(--amber)">RS</div><span>Raj S. · Account</span><div class="qst s-wt">⏱ Queue</div></div>
+            </div>
+          </div>
         </div>
-
       </div>
-    </section><!-- End Clients Section -->
+      <div class="fchip bl"><div class="fcl">CSAT Score</div><div class="fcv">94.2% ↑</div></div>
+    </div>
+  </div>
+</section>
 
-    <!-- ======= About Section ======= -->
-    <section id="Services" class="Services section-bg">
-      <div class="container" data-aos="fade-up">
+<div class="mq">
+  <div class="mql">Certified &amp; Integrated With Leading Platforms</div>
+  <div class="mqt">
+    <div class="mc">⚡ Genesys Cloud</div><div class="mc">☁️ AWS Connect</div><div class="mc">🔵 Avaya</div>
+    <div class="mc">🌐 Cisco UCCE</div><div class="mc">🤖 Google Dialogflow</div><div class="mc">💜 Salesforce</div>
+    <div class="mc">🟢 ServiceNow</div><div class="mc">🔷 Microsoft Azure</div>
+    <div class="mc">⚡ Genesys Cloud</div><div class="mc">☁️ AWS Connect</div><div class="mc">🔵 Avaya</div>
+    <div class="mc">🌐 Cisco UCCE</div><div class="mc">🤖 Google Dialogflow</div><div class="mc">💜 Salesforce</div>
+    <div class="mc">🟢 ServiceNow</div><div class="mc">🔷 Microsoft Azure</div>
+  </div>
+</div>
 
-        <div class="row no-gutters">
-          <div class="content col-xl-5 d-flex align-items-stretch">
-            <div class="content">
-              <h3>Empowering Conversations, Connecting Experiences</h3>
-              <p>
-			  At Cloud Ring Solutions, we're dedicated to transforming the way businesses connect with their customers. With a passion for innovation and a commitment to excellence, we specialize in providing cutting-edge contact center solutions that empower businesses to deliver exceptional customer experiences.
-Our comprehensive suite of services spans across leading industry platforms such as Genesys, AWS, Avaya, and Cisco, enabling us to tailor solutions to your unique needs. From seamless integrations and AI-powered self-service solutions to managed services and comprehensive training, we offer a holistic approach to enhancing customer engagement.
-With a team of experts, we're here to guide you through every step of the journey, from implementation to ongoing maintenance. Our mission is to elevate your contact center operations, drive efficiency, and ensure customer satisfaction at every interaction.
-Welcome to Cloud Ring Solutions, where innovation meets excellence in customer engagement."
 
-			 </p>
-              <a href="#" class="about-btn"><span>Services</span> <i class="bx bx-chevron-right"></i></a>
-            </div>
-          </div>
-          <div class="col-xl-7 d-flex align-items-stretch">
-            <div class="icon-boxes d-flex flex-column justify-content-center">
-              <div class="row">
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                  <i class="bx bx-receipt"></i>
-                  <h4>Self-Service Solutions</h4>
-                  <p>Our array of self-service solutions is designed to provide customers with the convenience they expect. From AI-driven chatbots to interactive voice response systems, we empower you to deliver seamless self-service experiences across all the leading technologies – Cisco, Avaya, AWS, Genesys, and Google Dialogflow.</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                  <i class="bx bx-cube-alt"></i>
-                  <h4>Managed Services</h4>
-                  <p>Let us handle the complexities while you focus on what matters most. Our managed services ensure that your contact center operations run smoothly. We optimize processes, enhance agent productivity, and guarantee consistent customer satisfaction, no matter the platform.</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                  <i class="bx bx-images"></i>
-                  <h4>Comprehensive Training</h4>
-                  <p>Stay ahead of the curve with our comprehensive training programs. Our experts provide hands-on training on all relevant technologies, from the fundamentals to full-stack development. Equip your team with the knowledge they need to excel in an ever-evolving landscape.</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                  <i class="bx bx-shield"></i>
-                  <h4>Outsourcing Solutions</h4>
-                  <p>Need to extend your capabilities? Our outsourcing services provide a seamless extension to your team. Trust us to handle critical operations, allowing you to expand without compromising quality.</p>
-                </div>
-              </div>
-            </div><!-- End .content-->
-          </div>
+<!-- PHOTO HERO STRIP -->
+<div class="photo-hero-strip">
+  <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1800&q=85&fit=crop" alt="Cloud Ring Solutions contact center team" loading="lazy">
+  <div class="overlay">
+    <div style="max-width:700px;">
+      <div class="ey" style="margin-bottom:1rem;">Who We Are</div>
+      <h2 style="font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:800;line-height:1.08;letter-spacing:-0.02em;color:var(--w);margin-bottom:1.2rem;">
+        A Team That Lives <span style="color:var(--sky)">Inside Contact Centers.</span>
+      </h2>
+      <p style="font-size:1rem;line-height:1.85;color:var(--wd);max-width:560px;">
+        We've spent years in the trenches — building, fixing, and scaling contact centers on every major platform. We don't just consult. We embed, we solve, and we deliver.
+      </p>
+    </div>
+  </div>
+</div>
+
+<section class="sec" id="services">
+  <div class="si">
+    <div class="ey">What We Do</div>
+    <h2 class="sh">End-to-End Contact Center <span class="ac">Transformation</span></h2>
+    <p class="sp">From architecture to AI automation — we design, build, train, and operate contact center solutions that grow with your ambition.</p>
+    <div class="svgrid">
+      <div class="sv"><div class="sv-ic">🤖</div><h3>AI-Powered Self-Service</h3><p>Deploy intelligent virtual agents resolving up to 70% of inbound queries. Natural language, context retention, and seamless human escalation in real time.</p><div class="tags"><span class="tag tb">Dialogflow</span><span class="tag tg">NLU</span><span class="tag tv">LLM</span></div></div>
+      <div class="sv"><div class="sv-ic">🔗</div><h3>CRM &amp; Systems Integration</h3><p>Connect to Salesforce, ServiceNow, SAP and more. Real-time screen pop, automated logging, and unified customer views at every touchpoint.</p><div class="tags"><span class="tag tb">Salesforce</span><span class="tag tv">ServiceNow</span><span class="tag tg">REST APIs</span></div></div>
+      <div class="sv"><div class="sv-ic">📊</div><h3>Real-Time &amp; Historic Analytics</h3><p>Live dashboards and deep-dive analytics in one place. Track queue, agent performance, AI resolution rates, and customer sentiment.</p><div class="tags"><span class="tag tb">Live Dash</span><span class="tag tg">CSAT</span></div></div>
+      <div class="sv"><div class="sv-ic">🎓</div><h3>Training &amp; Certification</h3><p>Full-stack contact center training: Genesys administration to AI bot development. Hands-on programs that build lasting capability across your team.</p><div class="tags"><span class="tag tv">Workshops</span><span class="tag tb">Certification</span></div></div>
+      <div class="sv"><div class="sv-ic">🛡️</div><h3>Managed Services</h3><p>Your platform, always on. 24/7 NOC, proactive incident response, continuous optimisation, and capacity planning included as standard.</p><div class="tags"><span class="tag tb">24/7 NOC</span><span class="tag tv">SLA Driven</span></div></div>
+      <div class="sv"><div class="sv-ic">⚙️</div><h3>Process Automation</h3><p>We study your daily workflows and build AI-powered automation that eliminates repetitive tasks and frees your team for what matters most.</p><div class="tags"><span class="tag tg">AI Workflow</span><span class="tag ta">RPA</span></div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PHOTO GALLERY — Real Contact Center Work -->
+<section class="sec" style="background:var(--ink);padding-top:5rem;padding-bottom:3rem;">
+  <div class="si">
+    <div class="ey">In The Field</div>
+    <h2 class="sh">Real Work. <span class="ac">Real Results.</span></h2>
+    <p class="sp">From live contact center floors to training rooms and NOC dashboards — this is what we do every day.</p>
+    <div class="photo-grid">
+      <div class="photo-card tall">
+        <img src="https://images.unsplash.com/photo-1560264280-88b68371db39?w=1200&q=85&fit=crop&crop=face" alt="Contact center agent with headset" loading="lazy">
+        <div class="photo-card-overlay">
+          <h3>Live Agent Support</h3>
+          <p>AI-assisted agents delivering faster, smarter customer resolutions</p>
         </div>
-
       </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Counts Section ======= 
-    <section id="counts" class="counts">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Happy Clients</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-            <div class="count-box">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Projects</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hours Of Support</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hard Workers</p>
-            </div>
-          </div>
-
+      <div class="photo-card">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=85&fit=crop" alt="Analytics dashboard contact center" loading="lazy">
+        <div class="photo-card-overlay">
+          <h3>Real-Time Analytics</h3>
+          <p>Live dashboards tracking every queue, agent, and AI resolution</p>
         </div>
-
       </div>
-    </section><!-- End Counts Section -->
-
-    <!-- ======= Tabs Section ======= -->
-    <section id="tabs" class="tabs">
-      <div class="container" data-aos="fade-up">
-
-        <ul class="nav nav-tabs row d-flex">
-          <li class="nav-item col-3">
-            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
-            <!--   <img src="assets/img/genesys.png" alt="genesys">-->
-              <h4 class="d-none d-lg-block">GENESYS</h4>
-            </a>
-          </li>
-          <li class="nav-item col-3">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-              <!-- <img src="assets/img/aws.png" alt="aws">-->
-              <h4 class="d-none d-lg-block">AWS</h4>
-            </a>
-          </li>
-          <li class="nav-item col-3">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
-    <!--   <img src="assets/img/avaya.png" alt="avaya">-->
-              <h4 class="d-none d-lg-block">AVAYA</h4>
-            </a>
-          </li>
-          <li class="nav-item col-3">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
-                  <!-- <img src="assets/img/cisco.png" alt="cisco">-->
-              <h4 class="d-none d-lg-block">CISCO</h4>
-            </a>
-          </li>
-        </ul>
-
-        <div class="tab-content">
-          <div class="tab-pane active show" id="tab-1">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
-                <h3>Genesys Integration: Transform Your Contact Center Experience.</h3>
-                <p class="fst-italic">
-                  Elevate your customer interactions with seamless integration into Genesys, unlocking new levels of contact center efficiency and customer satisfaction.
-                </p>
-                <ul>
-                  <li><i class="ri-check-double-line"></i> Unleash Potential: Harness Genesys technology to unlock the full potential of your contact center operations.</li>
-                  <li><i class="ri-check-double-line"></i> Personalized Experiences: Deliver tailored customer experiences with Genesys' advanced customization capabilities.</li>
-                  <li><i class="ri-check-double-line"></i> Efficient Workflows: Streamline agent workflows and optimize processes, powered by Genesys integration.</li>
-				  <li><i class="ri-check-double-line"></i> Multi-Channel Excellence: Seamlessly engage customers across multiple channels, ensuring consistent interactions.</li>
-				  <li><i class="ri-check-double-line"></i> Scalability and Growth: Scale your operations effortlessly as your business expands, supported by Genesys' scalability.</li>
-				  <li><i class="ri-check-double-line"></i> Exceptional Support: Rely on Genesys' proven framework for reliability, security, and continuous support.</li>
-				
-			 </ul>
-                <p>
-                 Experience the transformative impact of Genesys integration and redefine how you connect with your customers.
-                </p>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
-                <img src="assets/img/tabs-1.jpg" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane" id="tab-2">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>AWS Integration: Harness the Power of Cloud for Contact Centers</h3>
-                <p>
-                 Elevate your contact center operations by seamlessly integrating with Amazon Web Services (AWS), bringing cloud-based innovation to your customer interactions.
-                </p>
-                <ul>
-                  <li><i class="ri-check-double-line"></i> Cloud Efficiency: Leverage AWS to enhance the efficiency and scalability of your contact center operations.</li>
-                  <li><i class="ri-check-double-line"></i> Flexible Solutions: Explore flexible and adaptable solutions powered by AWS, tailored to your specific needs.</li>
-                  <li><i class="ri-check-double-line"></i> Seamless Communication: Facilitate seamless customer-agent communication through AWS-powered tools.</li>
-                  <li><i class="ri-check-double-line"></i> Real-time Insights: Gain real-time insights into contact center performance with AWS analytics and reporting.</li>
-                  <li><i class="ri-check-double-line"></i> Agile Growth: Scale your operations easily as your business grows, thanks to AWS' elastic resources.</li>
-                  <li><i class="ri-check-double-line"></i> Robust Security: Trust in AWS' robust security measures to safeguard your data and customer interactions.</li>
-                
-				</ul>
-				 <p class="fst-italic">
-             Discover the limitless possibilities of AWS integration and revolutionize your contact center's performance with cloud-powered solutions.
-                </p>
-               
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/tabs-2.jpg" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane" id="tab-3">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Avaya Integration: Redefine Customer Engagement with Precision</h3>
-                <p>
-                 Seamlessly integrate with Avaya to revolutionize your customer engagement strategies and create exceptional contact center experiences.
-                </p>
-                <ul>
-                  <li><i class="ri-check-double-line"></i> Advanced Engagement: Leverage Avaya's cutting-edge technology to craft advanced customer engagement solutions.</li>
-                  <li><i class="ri-check-double-line"></i> Personalized Touch: Deliver personalized customer experiences by harnessing Avaya's customization capabilities.</li>
-                  <li><i class="ri-check-double-line"></i> Effortless Interactions: Facilitate seamless customer interactions and agent workflows using Avaya tools.</li>
-                <li><i class="ri-check-double-line"></i> Omnichannel Excellence: Engage customers across multiple channels seamlessly and consistently.</li>
-				 <li><i class="ri-check-double-line"></i> Scalability and Adaptability: Scale your contact center operations as needed with Avaya's adaptable framework.</li>
-				 <li><i class="ri-check-double-line"></i> Reliability at Core: Rely on Avaya's reliable architecture to ensure uninterrupted contact center performance.</li>
-				
-				</ul>
-                <p class="fst-italic">
-                  Transform customer engagement with Avaya integration and redefine how your business connects and communicates with clients.
-                </p>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/tabs-3.jpg" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane" id="tab-4">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Cisco Integration: Elevate Your Contact Center</h3>
-               
-                <p class="fst-italic">
-           Experience the power of seamless integration with Cisco systems, enhancing your contact center's capabilities and revolutionizing customer interactions.
-		        </p>
-                <ul>
-                  <li><i class="ri-check-double-line"></i> Enhanced Productivity: Streamline agent workflows and boost productivity with our Cisco integration.</li>
-                  <li><i class="ri-check-double-line"></i> Seamless Communication: Facilitate effortless communication between agents and customers using Cisco's advanced technology.</li>
-                  <li><i class="ri-check-double-line"></i> Scalable Solutions: Scale your contact center operations seamlessly as your business grows, powered by Cisco's reliable infrastructure.</li>
-					<li><i class="ri-check-double-line"></i> Empower Your Team: Provide your agents with the tools they need to deliver exceptional customer experiences.</li>
-					<li><i class="ri-check-double-line"></i> Proven Reliability: Rely on Cisco's industry-leading framework for secure and dependable contact center operations.</li>
-			</ul>
-			<p>
-			  Discover the difference of Cisco integration and transform your contact center into a hub of efficiency and customer satisfaction.
-         
-			</p>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/tabs-4.jpg" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div>
+      <div class="photo-card">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=85&fit=crop" alt="Contact center team collaboration" loading="lazy">
+        <div class="photo-card-overlay">
+          <h3>Team Collaboration</h3>
+          <p>Supervisor desktops that keep everyone aligned and informed</p>
         </div>
-
       </div>
-    </section><!-- End Tabs Section -->
-
-    <!-- ======= Services Section ======= 
-    <section id="services" class="services section-bg ">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Services</h2>
-          <p>At Cloud Ring Solutions, we understand that a successful contact center requires a holistic approach. That's why we offer a range of services designed to empower your operations and enhance customer interactions:             
-		</p>
+      <div class="photo-card">
+        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&q=85&fit=crop" alt="Contact center training session" loading="lazy">
+        <div class="photo-card-overlay">
+          <h3>Hands-On Training</h3>
+          <p>Platform certification programs that build real, lasting capability</p>
         </div>
-
-        <div class="row">
-          <div class="col-md-6">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <i class="bi bi-briefcase"></i>
-              <h4><a href="#">Self-Service Solutions</a></h4>
-              <p>Embrace the power of AI-driven self-service options that empower your customers with instant assistance. Our solutions provide seamless interactions, allowing customers to find answers to their queries efficiently. This not only enhances customer satisfaction but also frees up your agents to handle more complex tasks.</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-card-checklist"></i>
-              <h4><a href="#">Managed Services</a></h4>
-              <p>Unlock the true potential of your contact center with our expert-managed services. Our team takes care of the intricate details, ensuring smooth operations, efficient call routing, and timely issue resolution. With our dedicated support, you can focus on core business strategies while we optimize your contact center performance.</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-bar-chart"></i>
-              <h4><a href="#">Outsourcing Solutions</a></h4>
-              <p>Seamlessly extend your capabilities and enhance your operational agility through our outsourcing services. Whether it's handling high call volumes during peak periods or managing specialized tasks, our experienced team becomes an extension of yours. This ensures consistent service quality and allows you to allocate resources more efficiently.</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-binoculars"></i>
-              <h4><a href="#">Solution Maintenance</a></h4>
-              <p>We understand the criticality of maintaining peak performance in your contact center. Our solution maintenance services provide regular checkups, updates, and optimizations to ensure your systems are always in top shape. This proactive approach minimizes disruptions, guarantees reliability, and upholds your commitment to exceptional customer service.</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
-              <i class="bi bi-brightness-high"></i>
-              <h4><a href="#">Full-Stack Training</a></h4>
-              <p>Equip your team with the skills they need to excel in the ever-evolving technological landscape. Our comprehensive training programs cover a wide spectrum of relevant technologies, from front-end interfaces to backend systems. This empowers your agents to deliver exceptional customer experiences and adapt to emerging trends.</p>
-            </div>
-          </div>
-      
-        </div>
-
       </div>
-    </section> End Services Section -->
-
-    <!--======= Portfolio Section ======= 
-    <section id="portfolio" class="portfolio">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Testimonials Section ======= 
-    <section id="testimonials" class="testimonials">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
-        </div>
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                  <h3>Saul Goodman</h3>
-                  <h4>Ceo &amp; Founder</h4>
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item 
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                  <h3>Sara Wilsson</h3>
-                  <h4>Designer</h4>
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item 
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                  <h3>Jena Karlis</h3>
-                  <h4>Store Owner</h4>
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item 
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                  <h3>Matt Brandon</h3>
-                  <h4>Freelancer</h4>
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item 
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                  <h3>John Larson</h3>
-                  <h4>Entrepreneur</h4>
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat esse veniam culpa fore nisi cillum quid.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section><!-- End Testimonials Section -->
-
-    <!-- ======= Pricing Section ======= 
-    <section id="pricing" class="pricing section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Pricing</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="box" data-aos="fade-up" data-aos-delay="100">
-              <h3>Free</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li class="na">Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
-            <div class="box featured" data-aos="fade-up" data-aos-delay="200">
-              <h3>Business</h3>
-              <h4><sup>$</sup>19<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-            <div class="box" data-aos="fade-up" data-aos-delay="300">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Pricing Section -->
-
-    <!-- ======= Frequently Asked Questions Section ======= 
-    <section id="faq" class="faq">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Frequently Asked Questions</h2>
-        </div>
-
-        <ul class="faq-list accordion" data-aos="fade-up">
-
-          <li>
-            <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <a data-bs-toggle="collapse" data-bs-target="#faq3" class="collapsed">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-            <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-            <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <a data-bs-toggle="collapse" data-bs-target="#faq6" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-            <div id="faq6" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
-              </p>
-            </div>
-          </li>
-
-        </ul>
-
-      </div>
-    </section><!-- End Frequently Asked Questions Section -->
-
-    <!-- ======= Team Section ======= 
-    <section id="team" class="team section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Team</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="200">
-              <div class="member-img">
-                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="400">
-              <div class="member-img">
-                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Team Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-
-          <div >
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="info-box">
-                  <i class="bx bx-map"></i>
-                  <h3>Our Address</h3>
-                  <p>8735, DUNWOODY PLACE STEN, ATLANTA GEORGIA 30350 USA</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box mt-4">
-                  <i class="bx bx-envelope"></i>
-                  <h3>Email Us</h3>
-                  <p>MARKETING@cloudringsolutions.com<br>cloudringsolutions@gmail.com</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="info-box mt-4">
-                  <i class="bx bx-phone-call"></i>
-                  <h3>Call Us</h3>
-                  <p>+91 98414 79475</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        <!--  <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div>
--->
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Cloud Ring Solutions<span>.</span></h3>
-            <p>
-              8735, DUNWOODY PLACE STEN, ATLANTA GEORGIA 30350 USA<br>
-              <br>
-              <strong>Phone:</strong> +91 98414 79475<br>
-              <strong>Email:</strong> Marketing@cloudringsolutions.com<br>
-            </p>
-          </div>
-
-          <!--<div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-
+      <div class="photo-card">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&q=85&fit=crop" alt="NOC managed services operations center" loading="lazy">
+        <div class="photo-card-overlay">
+          <h3>Managed NOC</h3>
+          <p>24/7 monitoring, incident response and continuous optimisation</p>
         </div>
       </div>
     </div>
--->
-    <div class="container d-md-flex py-4">
+  </div>
+</section>
 
-      <div class="me-md-auto text-center text-md-start">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Cloud Ring Solutions</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/presento-bootstrap-corporate-template/ -->
-          Designed by <a href="https://cloudringsolutionscom/">CloudRingSolutions</a>
+<section class="sec trsec" id="training">
+  <div class="si">
+    <div class="trgrid">
+      <div>
+        <div class="ey">Training &amp; Enablement</div>
+        <h2 class="sh">We Don't Just Build — <span class="vi">We Teach.</span></h2>
+        <p class="sp">Our training programs go beyond theory. We embed with your team, understand your environment, and deliver hands-on capability that sticks — from day one through long-term mastery.</p>
+        <div class="tsteps">
+          <div class="tstep"><div class="tnum">01</div><div class="tbody"><h4>Discovery &amp; Assessment</h4><p>We start by understanding your team's current skill gaps, platform maturity, and goals — building a custom training roadmap, not a generic curriculum.</p><span class="ttag">🔍 Current State Audit</span></div></div>
+          <div class="tstep"><div class="tnum">02</div><div class="tbody"><h4>Platform-Specific Training</h4><p>Deep-dive workshops on Genesys, AWS Connect, Avaya, and Cisco — covering administration, routing, AI bot development, scripting, and API integration.</p><span class="ttag">🎓 Hands-On Labs</span></div></div>
+          <div class="tstep"><div class="tnum">03</div><div class="tbody"><h4>AI &amp; Automation Enablement</h4><p>Train your team to build, manage, and improve AI virtual agents, IVR flows, and automated workflows using real production environments.</p><span class="ttag">🤖 AI Readiness Program</span></div></div>
+          <div class="tstep"><div class="tnum">04</div><div class="tbody"><h4>Certification &amp; Ongoing Support</h4><p>Leave with recognised certifications, internal champions, and direct access to our experts as your team grows into their capability.</p><span class="ttag">✅ Certified Competency</span></div></div>
         </div>
       </div>
-      <!--<div class="social-links text-center text-md-end pt-3 pt-md-0">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div>-->
+      <div class="cert-card">
+        <div class="chdr"><div class="ctitle">Training Dashboard</div><div class="cbdg">● Active Cohort</div></div>
+        <div class="clist">
+          <div class="course"><div class="ctop"><span class="cname">Genesys Cloud Administration</span><span class="clvl">Advanced</span></div><div class="prog"><div class="pf pb" style="width:82%"></div></div><div style="display:flex;justify-content:space-between;margin-top:0.28rem;font-size:0.57rem;color:var(--mt)"><span>Module 8 of 10</span><span style="color:var(--sky)">82%</span></div></div>
+          <div class="course"><div class="ctop"><span class="cname">AI Bot Development — Dialogflow</span><span class="clvl">Intermediate</span></div><div class="prog"><div class="pf pv" style="width:64%"></div></div><div style="display:flex;justify-content:space-between;margin-top:0.28rem;font-size:0.57rem;color:var(--mt)"><span>Module 7 of 11</span><span style="color:#a78bfa">64%</span></div></div>
+          <div class="course"><div class="ctop"><span class="cname">Contact Center Automation</span><span class="clvl">Foundation</span></div><div class="prog"><div class="pf pg" style="width:100%"></div></div><div style="display:flex;justify-content:space-between;margin-top:0.28rem;font-size:0.57rem;color:var(--mt)"><span>Completed</span><span style="color:var(--jade)">✓ Certified</span></div></div>
+          <div class="course"><div class="ctop"><span class="cname">AWS Connect + Lex Integration</span><span class="clvl">Advanced</span></div><div class="prog"><div class="pf pb" style="width:45%"></div></div><div style="display:flex;justify-content:space-between;margin-top:0.28rem;font-size:0.57rem;color:var(--mt)"><span>Module 5 of 12</span><span style="color:var(--sky)">45%</span></div></div>
+        </div>
+        <div class="cstats">
+          <div class="cs"><div class="csn">12</div><div class="csl">Courses Live</div></div>
+          <div class="cs"><div class="csn" style="color:var(--jade)">47</div><div class="csl">Certified</div></div>
+          <div class="cs"><div class="csn" style="color:var(--amber)">4.9★</div><div class="csl">Avg Rating</div></div>
+        </div>
+      </div>
     </div>
-  </footer><!-- End Footer -->
+  </div>
+</section>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<section class="sec mssec" id="managed">
+  <div class="si">
+    <div class="msgrid">
+      <div class="msvis">
+        <div class="mshdr"><div class="mstitle">Managed Services — NOC Dashboard</div><div class="mslive">All Systems Operational</div></div>
+        <div class="msmet">
+          <div class="mm"><div class="mmn">99.9%</div><div class="mml">Uptime This Month</div></div>
+          <div class="mm"><div class="mmn" style="color:var(--jade)">2.3s</div><div class="mml">Avg Response Time</div></div>
+          <div class="mm"><div class="mmn" style="color:var(--amber)">4</div><div class="mml">Open Tickets</div></div>
+          <div class="mm"><div class="mmn" style="color:#a78bfa">98%</div><div class="mml">SLA Compliance</div></div>
+        </div>
+        <div style="font-size:0.56rem;color:var(--mt);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.42rem;">Recent Incidents</div>
+        <div class="incl">
+          <div class="inc"><div class="idot iok"></div><span>Genesys routing — latency spike resolved</span><span class="itime">14m ago · Auto-resolved</span></div>
+          <div class="inc"><div class="idot iok"></div><span>AWS Connect bot — NLU timeout cleared</span><span class="itime">2h ago · Resolved</span></div>
+          <div class="inc"><div class="idot iwarn"></div><span>Salesforce sync — retry queue at 18%</span><span class="itime">Active · Monitoring</span></div>
+          <div class="inc"><div class="idot iok"></div><span>IVR deployment — production push complete</span><span class="itime">5h ago · Success</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="ey">Managed Services</div>
+        <h2 class="sh">Your Platform, <span class="ac">Always On.</span></h2>
+        <p class="sp">We don't just hand over the keys. Our managed services team continuously monitors, optimises, and evolves your contact center — so you never have to worry about what's happening under the hood.</p>
+        <div class="msf">
+          <div class="msfcard"><div style="font-size:1rem;margin-bottom:0.35rem;">🔭</div><h5>Current State Analysis</h5><p>We deeply understand your existing setup — architecture, pain points, and opportunities — before making any recommendations.</p></div>
+          <div class="msfcard"><div style="font-size:1rem;margin-bottom:0.35rem;">🛡️</div><h5>24/7 NOC Monitoring</h5><p>Round-the-clock visibility with proactive alerting, incident response, and root cause analysis as standard.</p></div>
+          <div class="msfcard"><div style="font-size:1rem;margin-bottom:0.35rem;">📈</div><h5>Continuous Optimisation</h5><p>Regular performance reviews, routing tweaks, AI model retraining, and capacity planning every sprint.</p></div>
+          <div class="msfcard"><div style="font-size:1rem;margin-bottom:0.35rem;">🚀</div><h5>On-Demand Expertise</h5><p>Certified engineers and architects whenever you need — without the overhead of full-time hires.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+<!-- SPLIT PHOTO — AgentPro teaser -->
+<div class="split-section">
+  <div class="split-img">
+    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200&q=85&fit=crop" alt="Professional contact center agent" loading="lazy">
+  </div>
+  <div class="split-content dark">
+    <div style="max-width:480px;">
+      <div class="ey">AgentPro in Action</div>
+      <h2 class="sh" style="margin-bottom:1rem;">What Your Agents <span class="ac">Experience Every Call.</span></h2>
+      <p style="font-size:0.93rem;line-height:1.85;color:var(--wd);margin-bottom:1.5rem;">
+        Real-time AI suggestions appearing as the conversation unfolds. Customer history surfacing automatically. Sentiment tracked live. Your agents feel like they have a superpower — because they do.
+      </p>
+      <a href="#agentpro" class="bpri" style="align-self:flex-start;">Explore AgentPro →</a>
+    </div>
+  </div>
+</div>
+<!-- SPLIT PHOTO — AI / Automation teaser, reversed -->
+<div class="split-section">
+  <div class="split-content navy">
+    <div style="max-width:480px;">
+      <div class="ey">AI Automation</div>
+      <h2 class="sh" style="margin-bottom:1rem;">We Map Your Work. <span class="vi">Then Replace the Grind.</span></h2>
+      <p style="font-size:0.93rem;line-height:1.85;color:var(--wd);margin-bottom:1.5rem;">
+        After-call work. Manual CRM updates. Ticket creation. Escalation routing. Every repetitive task your team does today — we automate with AI so they can focus on real conversations that need a human touch.
+      </p>
+      <a href="#automation" class="bpri" style="align-self:flex-start;">See Automation →</a>
+    </div>
+  </div>
+  <div class="split-img">
+    <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=85&fit=crop" alt="AI technology analytics" loading="lazy">
+  </div>
+</div>
 
-</body>
+<section class="sec ausec" id="automation">
+  <div class="si">
+    <div class="auhead">
+      <div class="ey">Process Automation</div>
+      <h2 class="sh">We Understand Your <span class="ac">Daily Work.</span><br>Then We <span class="vi">Automate It.</span></h2>
+      <p class="sp" style="margin:0.8rem auto 0;text-align:center">We map every repetitive task, manual handoff, and bottleneck in your operation. Then we build AI-powered automation that eliminates the grind and unlocks your team's full potential.</p>
+    </div>
+    <div class="augrid">
+      <div class="auc"><div class="aun b">01</div><div class="auic">🔭</div><h3>Process Discovery</h3><p>We shadow your team, map every daily workflow, and identify exactly which tasks consume time without creating value — before writing a single line of code.</p><div class="tags" style="margin-top:0.75rem"><span class="tag tb">Workflow Mapping</span><span class="tag tg">Gap Analysis</span></div></div>
+      <div class="auc"><div class="aun v">02</div><div class="auic">🧠</div><h3>AI Assistant Design</h3><p>Custom AI assistants built for your specific processes. Your product knowledge, your tone, your escalation rules — not generic chatbots.</p><div class="tags" style="margin-top:0.75rem"><span class="tag tv">Custom LLM</span><span class="tag tg">RAG</span></div></div>
+      <div class="auc"><div class="aun g">03</div><div class="auic">⚡</div><h3>Workflow Automation</h3><p>After-call work, ticket creation, CRM updates, follow-up scheduling — all handled automatically the moment an interaction ends.</p><div class="tags" style="margin-top:0.75rem"><span class="tag tg">Zero ACW</span><span class="tag tb">Auto-CRM</span></div></div>
+      <div class="auc"><div class="aun a">04</div><div class="auic">📡</div><h3>Continuous Learning</h3><p>Your AI assistants improve with every interaction. We monitor performance, retrain models, and expand automation scope as your business evolves.</p><div class="tags" style="margin-top:0.75rem"><span class="tag ta">Self-Improving</span><span class="tag tv">MLOps</span></div></div>
+    </div>
+    <div class="auflow">
+      <div class="aftitle">How automation transforms a typical contact center interaction</div>
+      <div class="afrow">
+        <div class="afnode sky"><div class="afnic">📞</div><div class="afnl">Customer Call</div><div class="afns">Inbound contact</div></div>
+        <div class="afarr">→</div>
+        <div class="afnode vi"><div class="afnic">🤖</div><div class="afnl">AI Identifies Intent</div><div class="afns">NLU in 50ms</div></div>
+        <div class="afarr">→</div>
+        <div class="afnode sky"><div class="afnic">🧠</div><div class="afnl">Agent Assist</div><div class="afns">Live suggestions</div></div>
+        <div class="afarr">→</div>
+        <div class="afnode jd"><div class="afnic">✅</div><div class="afnl">Auto-Resolved</div><div class="afns">Or escalated</div></div>
+        <div class="afarr">→</div>
+        <div class="afnode vi"><div class="afnic">📋</div><div class="afnl">AI Summarises</div><div class="afns">CRM updated</div></div>
+        <div class="afarr">→</div>
+        <div class="afnode sky"><div class="afnic">📊</div><div class="afnl">Insights Logged</div><div class="afns">Reports live</div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-</html>
+<section class="sec aisec" id="ai">
+  <div class="si">
+    <div class="aistrip">
+      <div class="aisi">
+        <div>
+          <div class="ey">AI Assistants</div>
+          <h2 class="sh" style="margin-bottom:0.9rem">Your Team's <span class="ac">Smartest</span><br>New Colleague.</h2>
+          <p style="font-size:0.91rem;line-height:1.82;color:var(--wd);margin-bottom:1.5rem">Our AI assistants understand context, retrieve from your knowledge base, assist agents in real time, and improve with every interaction. Built for contact centers, tuned for your business.</p>
+          <div class="aiflist">
+            <div class="aif"><div class="aific b">🎯</div><div class="aifb"><h4>Real-Time Agent Co-Pilot</h4><p>Listens to every call and surfaces the exact answer, policy, or action before the agent even has to search.</p></div></div>
+            <div class="aif"><div class="aific v">📚</div><div class="aifb"><h4>Knowledge Base Intelligence</h4><p>Connects to your internal docs, FAQs, product manuals, and CRM — one authoritative source of truth.</p></div></div>
+            <div class="aif"><div class="aific g">🔄</div><div class="aifb"><h4>Continuous Improvement</h4><p>Every unresolved query or escalation becomes training data. Your AI assistant gets sharper with every shift.</p></div></div>
+          </div>
+        </div>
+        <div class="chatmock">
+          <div class="chdr">
+            <div class="chav">AI</div>
+            <div><div class="chname">AI Assistant</div><div style="font-size:0.57rem;color:var(--mt)">Powered by Cloud Ring AI</div></div>
+            <div class="chstat">● Active</div>
+          </div>
+          <div class="brow r"><div class="bub u">Customer asking about invoice — says it's higher than expected.</div></div>
+          <div class="brow"><div class="bub a">Found it. Account #CRS-2847. Last invoice <strong>₹12,400</strong> vs usual <strong>₹8,200</strong>. Difference: Premium tier upgrade on Mar 3rd.<br><br>Suggest: acknowledge, explain tier charge, walk through new features included.</div></div>
+          <div class="brow r"><div class="bub u">They want to know if they can downgrade.</div></div>
+          <div class="brow"><div class="bub a">Policy: Downgrade allowed within 30 days — last day <strong style="color:var(--jade)">March 31st</strong>. Prorated credit applies.<br><br><span style="color:var(--sky);font-size:0.62rem">→ Click to auto-draft confirmation email</span></div></div>
+          <div style="display:flex;gap:3px;align-items:center;padding:0.38rem 0;"><div class="tyd"></div><div class="tyd"></div><div class="tyd"></div><span style="font-size:0.57rem;color:var(--mt);margin-left:5px">AI is listening...</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="aicards">
+      <div class="aic"><div class="aic-ic">🗣️</div><h3>Conversational AI</h3><p>LLMs trained on contact center data. Complex, multi-turn conversations without rigid scripts or intent trees.</p><div class="tags" style="margin-top:0.85rem"><span class="tag tb">LLM</span><span class="tag tg">NLU</span></div></div>
+      <div class="aic"><div class="aic-ic">⚡</div><h3>Real-Time Assist</h3><p>Live transcription, sentiment detection, and next-best-action delivered to agents in under 500ms mid-call.</p><div class="tags" style="margin-top:0.85rem"><span class="tag tb">Real-Time</span><span class="tag tv">NLP</span></div></div>
+      <div class="aic"><div class="aic-ic">🔮</div><h3>Predictive Insights</h3><p>Forecast call volume, predict churn, identify coaching gaps, and surface patterns before standard reports catch them.</p><div class="tags" style="margin-top:0.85rem"><span class="tag tv">ML</span><span class="tag tg">Forecast</span></div></div>
+      <div class="aic"><div class="aic-ic">🧩</div><h3>AI IVR Builder</h3><p>Describe your call flow in plain English. AI writes, validates, and deploys IVR in minutes. Zero coding needed.</p><div class="tags" style="margin-top:0.85rem"><span class="tag tv">GenAI</span><span class="tag tb">No-Code</span></div></div>
+      <div class="aic"><div class="aic-ic">🎯</div><h3>Smart Routing</h3><p>Route beyond skills — AI evaluates intent, emotion, history, and agent proficiency to make the optimal match every time.</p><div class="tags" style="margin-top:0.85rem"><span class="tag tg">Smart</span><span class="tag tb">Real-Time</span></div></div>
+      <div class="aic"><div class="aic-ic">📋</div><h3>Auto Summarisation</h3><p>AI summaries, disposition tags, and CRM updates generated after every interaction. After-call work eliminated.</p><div class="tags" style="margin-top:0.85rem"><span class="tag tv">GenAI</span><span class="tag tg">Zero ACW</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec prodsec" id="agentpro">
+  <div class="si">
+    <div class="pblock">
+      <div>
+        <div class="ptag pt-b">🎧 Product · AgentPro</div>
+        <h2 class="ph">Inbound Contact Center <span style="color:var(--sky)">Reimagined.</span></h2>
+        <p class="psub">AgentPro is our flagship inbound platform — where virtual AI agents and human agents work side-by-side with live AI assistance, deep CRM integration, and full supervisor intelligence built in from day one.</p>
+        <div class="flist">
+          <div class="fi"><div class="fck ck-b">✓</div><div class="ft"><strong>Virtual AI Agents</strong> — Always-on conversational AI resolving up to 70% of inbound queries across voice and chat, without human intervention.</div></div>
+          <div class="fi"><div class="fck ck-b">✓</div><div class="ft"><strong>Real-Time AI Assist</strong> — Live transcription, sentiment detection, and next-best-action prompts delivered mid-call in under 500ms.</div></div>
+          <div class="fi"><div class="fck ck-b">✓</div><div class="ft"><strong>Supervisor Desktop</strong> — Full-fleet visibility. Monitor live calls, whisper-coach agents, barge, and watch AI resolution rise in real time.</div></div>
+          <div class="fi"><div class="fck ck-b">✓</div><div class="ft"><strong>Unified CRM Panel</strong> — Customer history, open tickets, last interaction — surfaced automatically before your agent speaks a word.</div></div>
+          <div class="fi"><div class="fck ck-b">✓</div><div class="ft"><strong>Live + Historic Reports</strong> — Real-time queue metrics and deep analytics in one dashboard. No switching tools, no data silos.</div></div>
+        </div>
+        <a href="#contact" class="pbtn pb-b">Request AgentPro Demo →</a>
+      </div>
+      <div>
+        <div class="apmock">
+          <div class="mhdr"><div class="mpn b">AgentPro — Agent Desktop</div><div class="mlv">System Live</div></div>
+          <div class="agl">
+            <div class="agm">
+              <div class="ccrd">
+                <div class="cct"><div><div class="cn">Priya Ramachandran</div><div class="cd">+91 98400 12345 · Premium Gold</div></div><div class="ctm">04:32</div></div>
+                <div class="aibx"><div class="ail">🤖 AI Suggestion</div><div class="ait">Likely re: <strong style="color:var(--jade)">invoice dispute INV-2024-0891</strong>. Proactive refund — 92% resolution probability.</div></div>
+              </div>
+              <div class="crmbx"><div class="crml">CRM — Customer Profile</div>
+                <div class="crmr"><span class="crk">Tier</span><span class="crv" style="color:var(--amber)">Premium Gold</span></div>
+                <div class="crmr"><span class="crk">CSAT</span><span class="crv" style="color:var(--jade)">94/100</span></div>
+                <div class="crmr"><span class="crk">Open Tickets</span><span class="crv">2</span></div>
+                <div class="crmr"><span class="crk">Last Contact</span><span class="crv">3 days ago</span></div>
+              </div>
+            </div>
+            <div class="spc">
+              <div class="spl">Supervisor View</div>
+              <div class="agr"><div class="agd" style="background:var(--jade)"></div><span>Agent 1 · On Call</span></div>
+              <div class="agr"><div class="agd" style="background:var(--sky)"></div><span>Agent 2 · AI Assist</span></div>
+              <div class="agr"><div class="agd" style="background:var(--jade)"></div><span>Agent 3 · Available</span></div>
+              <div class="agr"><div class="agd" style="background:var(--amber)"></div><span>Agent 4 · Break</span></div>
+              <div class="agr" style="background:rgba(124,58,237,0.08);border:1px solid rgba(124,58,237,0.15)"><div class="agd" style="background:#a78bfa"></div><span style="color:#a78bfa">Bot · 3 active</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec prodsec" id="vantage" style="background:var(--ink)">
+  <div class="si">
+    <div class="pblock flip">
+      <div>
+        <div class="ptag pt-v">📞 Product · VantageDial</div>
+        <h2 class="ph">Outbound, <span style="color:#a78bfa">Elevated.</span></h2>
+        <p class="psub">VantageDial combines agent-led dialing, AI-powered IVR campaigns, and a revolutionary AI chat interface that lets anyone build complex IVR flows just by describing them in plain language. No code. No scripts.</p>
+        <div class="flist">
+          <div class="fi"><div class="fck ck-v">✓</div><div class="ft"><strong>Agent Outbound Dialer</strong> — Predictive, progressive and preview modes with real-time AMD, TCPA compliance, and auto-disposition.</div></div>
+          <div class="fi"><div class="fck ck-v">✓</div><div class="ft"><strong>AI IVR Campaigns</strong> — Launch outbound IVR at scale. Personalised voice messages, DTMF capture, intelligent routing — no developer needed.</div></div>
+          <div class="fi"><div class="fck ck-v">✓</div><div class="ft"><strong>Build IVR by Chat</strong> — Describe your call flow in plain language. AI drafts, validates, and deploys the IVR in minutes. Zero code.</div></div>
+          <div class="fi"><div class="fck ck-v">✓</div><div class="ft"><strong>Campaign Intelligence</strong> — Best-time-to-call AI, contact scoring, penetration rates, and smart retry logic that maximise every list.</div></div>
+          <div class="fi"><div class="fck ck-v">✓</div><div class="ft"><strong>Unified Reporting</strong> — Conversion funnels, agent performance, and campaign ROI in one live dashboard.</div></div>
+        </div>
+        <a href="#contact" class="pbtn pb-v">Request VantageDial Demo →</a>
+      </div>
+      <div>
+        <div class="vdmock">
+          <div class="mhdr"><div class="mpn v">VantageDial — Campaign Center</div><div class="mlv">Live</div></div>
+          <div class="vdl">
+            <div class="vdp">
+              <div class="vds"><div class="vdn">1,284</div><div class="vdll">Dialed Today</div></div>
+              <div class="vds"><div class="vdn" style="color:var(--jade)">38%</div><div class="vdll">Contact Rate</div></div>
+              <div class="vds"><div class="vdn" style="color:var(--amber)">12</div><div class="vdll">Agents Live</div></div>
+            </div>
+            <div class="vdr">
+              <div class="ivrb"><div class="ivrt">🤖 AI IVR Builder</div>
+                <div class="ivrf">
+                  <div class="ivn">📞 Inbound Greeting</div>
+                  <div class="ivn ai">🧠 AI Intent Detection</div>
+                  <div class="ivn">🔢 DTMF Menu · 3 options</div>
+                  <div class="ivn ai">🤖 Virtual Agent handles</div>
+                  <div class="ivn">🎧 Escalate to Agent</div>
+                </div>
+              </div>
+              <div class="chbox"><div class="chlbl">Chat to Build IVR</div>
+                <div class="chbb">"IVR for loan reminders, 3 options, AI fallback"</div>
+                <div class="chbb ai">✓ 5-node IVR built. Deploying to campaign...</div>
+                <div class="chinp">Describe your next IVR flow...</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="platforms" style="background:var(--ink2)">
+  <div class="si">
+    <div class="ey">Platform Expertise</div>
+    <h2 class="sh">We Build On The <span class="ac">Platforms</span> You Already Trust</h2>
+    <div class="plgrid">
+      <div class="pl"><span class="plic">⚡</span><div class="pln">Genesys Cloud</div><div class="pld">CX Cloud architecture, routing design, AI integrations, and full-lifecycle development.</div></div>
+      <div class="pl"><span class="plic">☁️</span><div class="pln">AWS Connect</div><div class="pld">Amazon Connect with Lex bots, Lambda integrations, and Contact Lens analytics.</div></div>
+      <div class="pl"><span class="plic">🔵</span><div class="pln">Avaya</div><div class="pld">AES, AAEP, Oceana and Experience Platform — legacy migration to cloud.</div></div>
+      <div class="pl"><span class="plic">🌐</span><div class="pln">Cisco</div><div class="pld">UCCE, UCCX, and Webex Contact Center design, scripting, and managed support.</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="stswrap sec" style="padding:0">
+  <div class="stsrow">
+    <div class="stb"><div class="stn">70%</div><div class="stl">AI Self-Service Resolution</div></div>
+    <div class="stb"><div class="stn">99.9%</div><div class="stl">Platform Uptime SLA</div></div>
+    <div class="stb"><div class="stn">50ms</div><div class="stl">AI Assist Response</div></div>
+    <div class="stb"><div class="stn">4+</div><div class="stl">Platforms Certified</div></div>
+  </div>
+</div>
+
+<section class="sec ctasec">
+  <div class="ctain">
+    <div class="ey" style="justify-content:center;margin-bottom:1.1rem">Ready to Transform</div>
+    <h2>Your Contact Center <span style="color:var(--sky)">Deserves Better.</span></h2>
+    <p>Whether you're replacing legacy infrastructure, training your team, adding AI automation to daily processes, or building from scratch — Cloud Ring Solutions will do it brilliantly with you.</p>
+    <div class="ctabtns">
+      <a href="#contact" class="bpri">Book a Free Consultation →</a>
+      <a href="#automation" class="bout">Explore AI Automation</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec ctsec" id="contact">
+  <div class="si">
+    <div class="ey">Get In Touch</div>
+    <h2 class="sh">Let's Build Something <span class="ac">Remarkable.</span></h2>
+    <div class="ctgrid">
+      <form class="cform" onsubmit="return false;">
+        <div class="crow">
+          <div class="cg"><label>First Name</label><input type="text" placeholder="Arjun"></div>
+          <div class="cg"><label>Last Name</label><input type="text" placeholder="Kumar"></div>
+        </div>
+        <div class="crow">
+          <div class="cg"><label>Work Email</label><input type="email" placeholder="arjun@company.com"></div>
+          <div class="cg"><label>Company</label><input type="text" placeholder="Your Company"></div>
+        </div>
+        <div class="cg"><label>I'm Interested In</label>
+          <select>
+            <option>AgentPro — Inbound AI Platform</option>
+            <option>VantageDial — Outbound Solution</option>
+            <option>Both Products</option>
+            <option>Training &amp; Certification Program</option>
+            <option>Managed Services</option>
+            <option>Process Automation &amp; AI Assistants</option>
+            <option>Platform Integration (Genesys/AWS/Avaya/Cisco)</option>
+          </select>
+        </div>
+        <div class="cg"><label>Tell Us About Your Project</label><textarea placeholder="Describe your contact center setup, daily challenges, and what you want to automate or improve..."></textarea></div>
+        <button type="submit" class="bpri" style="border:none;cursor:pointer;font-family:'Syne',sans-serif;align-self:flex-start;">Send Message →</button>
+      </form>
+      <div>
+        <div class="cinfo">
+          <div class="ci"><div class="ciic">📧</div><div><h4>Email Us</h4><p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3a525f5656557a5956554f5e4853545d4955564f4e5355544914595557">[email&#160;protected]</a></p></div></div>
+          <div class="ci"><div class="ciic">📞</div><div><h4>Call Us</h4><p>+91 98400 00000</p></div></div>
+          <div class="ci"><div class="ciic">📍</div><div><h4>Headquarters</h4><p>Chennai, Tamil Nadu, India</p></div></div>
+        </div>
+        <div class="pchips"><div class="pcl">Our Products</div><div class="chiprow"><span class="chip ch-b">🎧 AgentPro</span><span class="chip ch-v">📞 VantageDial</span><span class="chip ch-g">🤖 AI Assistants</span></div></div>
+        <div class="pchips" style="margin-top:0.85rem"><div class="pcl">Our Services</div><div class="chiprow"><span class="chip ch-b">Training</span><span class="chip ch-v">Managed</span><span class="chip ch-g">Automation</span><span class="chip ch-b">Integration</span></div></div>
+        <div class="pchips" style="margin-top:0.85rem"><div class="pcl">Platforms</div><div class="chiprow"><span class="chip ch-b">Genesys</span><span class="chip ch-b">AWS Connect</span><span class="chip ch-b">Avaya</span><span class="chip ch-b">Cisco</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ftop">
+    <div class="fb">
+      <a href="#home" class="nbrand" style="text-decoration:none">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNDAwIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBhMWY0NCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZDJhNWUiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8Y2xpcFBhdGggaWQ9ImNsb3VkLWNsaXAiPgogICAgICA8cGF0aCBkPSJNNTIgMjIwIFE1MiAxNjAgMTA0IDE0OCBRMTA0IDcyIDE3NiA3MiBRMjEyIDcyIDIzMiA5NiBRMjQ4IDYwIDI5MiA2MCBRMzY4IDYwIDM2OCAxMzYgUTQwOCAxMzYgNDA4IDE4OCBRNDA4IDIyOCAzNjggMjI4IFoiLz4KICAgIDwvY2xpcFBhdGg+CiAgPC9kZWZzPgoKICA8IS0tIEJhY2tncm91bmQgcm91bmRlZCBzcXVhcmUgLS0+CiAgPHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI0MDAiIHJ4PSI4MCIgZmlsbD0idXJsKCNiZykiLz4KCiAgPCEtLSBDbG91ZCBzaGFwZSDigJQgc29saWQgbmF2eSBibHVlIC0tPgogIDxwYXRoIGQ9Ik01MiAyMzAgUTUyIDE2NiAxMDggMTUyIFExMDggNzIgMTgwIDcyIFEyMTggNzIgMjM4IDk4IFEyNTQgNjAgMjk4IDYwIFEzNzYgNjAgMzc2IDE0MCBRNDE0IDE0MCA0MTQgMTk0IFE0MTQgMjM2IDM3NCAyNDAgTDY4IDI0MCBaIgogICAgICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMiwgNjApIHNjYWxlKDAuOTMpIgogICAgICAgIGZpbGw9IiMxYTNhNzIiLz4KCiAgPCEtLSBDbG91ZCBzaGFwZSDigJQgc2xpZ2h0bHkgbGlnaHRlciBmb3IgZGVwdGggLS0+CiAgPHBhdGggZD0iTTQ4IDIzOCBRNDggMTY4IDEwNiAxNTIgUTEwNiA2OCAxODAgNjggUTIyMCA2OCAyNDIgOTYgUTI1OCA1NiAzMDIgNTYgUTM4NCA1NiAzODQgMTQwIFE0MjQgMTQwIDQyNCAxOTYgUTQyNCAyNDIgMzgwIDI0NiBMNjQgMjQ2IFoiCiAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwLCA1OCkgc2NhbGUoMC45MikiCiAgICAgICAgZmlsbD0iIzFlNDA4MCIvPgoKICA8IS0tIFBob25lIGhhbmRzZXQg4oCUIHdoaXRlLCBjbGVhbiBwcm9mZXNzaW9uYWwgc2hhcGUgLS0+CiAgPCEtLSBCYXNlZCBvbiBjbGFzc2ljIHRlbGVwaG9uZSByZWNlaXZlciBzaWxob3VldHRlIC0tPgogIDxwYXRoIGQ9IgogICAgTSAxMzggMjMwCiAgICBRIDEzMiAyMDAgMTM4IDE3OAogICAgTCAxNTIgMTUyCiAgICBRIDE1OCAxNDAgMTY4IDE0MAogICAgTCAxODggMTQyCiAgICBRIDIwMiAxNDQgMjAwIDE1OAogICAgTCAxOTYgMTcwCiAgICBRIDE5NCAxODAgMjAyIDE4NgogICAgUSAyMTQgMTk2IDIyNiAyMDIKICAgIFEgMjM2IDIwNiAyNDAgMTk4CiAgICBMIDI0NCAxODYKICAgIFEgMjQ4IDE3NCAyNjIgMTc2CiAgICBMIDI4NCAxODIKICAgIFEgMjk2IDE4NiAyOTQgMjAwCiAgICBMIDI5MCAyMTYKICAgIFEgMjg0IDIzOCAyNjQgMjQyCiAgICBRIDIyOCAyNTAgMTk2IDIzOAogICAgUSAxNjIgMjI2IDEzOCAyMzAKICAgIFoiCiAgICBmaWxsPSJ3aGl0ZSIKICAgIG9wYWNpdHk9IjAuOTYiLz4KCiAgPCEtLSBSaW5nIHdhdmUgYXJjIDEg4oCUIGNsb3Nlciwgc3Ryb25nZXIgYmx1ZSAtLT4KICA8cGF0aCBkPSJNIDMwMCAxNTUgQSA0NiA0NiAwIDAgMSAzMDAgMjQyIgogICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzRkYTZmZiIgc3Ryb2tlLXdpZHRoPSIxNCIKICAgICAgICBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KCiAgPCEtLSBSaW5nIHdhdmUgYXJjIDIg4oCUIGZ1cnRoZXIsIGxpZ2h0ZXIgYmx1ZSAtLT4KICA8cGF0aCBkPSJNIDMyMiAxMzYgQSA3MiA3MiAwIDAgMSAzMjIgMjYyIgogICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzRkYTZmZiIgc3Ryb2tlLXdpZHRoPSIxMCIKICAgICAgICBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9IjAuNSIvPgoKPC9zdmc+" alt="Cloud Ring Solutions Logo" style="width:42px;height:42px;border-radius:9px;display:block;flex-shrink:0;">
+        <div class="nbrand-text">
+          <span class="nbrand-name">Cloud Ring <span>Solutions</span></span>
+          <span class="nbrand-tag">AI · Contact Center · Automation</span>
+        </div>
+      </a>
+      <p>Building the future of customer intelligence — where AI, agents, training, and automation work as one unified ecosystem.</p>
+    </div>
+    <div class="fc"><h5>Products</h5><a href="#agentpro">AgentPro</a><a href="#vantage">VantageDial</a><a href="#ai">AI Assistants</a></div>
+    <div class="fc"><h5>Services</h5><a href="#services">Self-Service AI</a><a href="#training">Training</a><a href="#managed">Managed Services</a><a href="#automation">Automation</a></div>
+    <div class="fc"><h5>Platforms</h5><a href="#platforms">Genesys</a><a href="#platforms">AWS Connect</a><a href="#platforms">Avaya</a><a href="#platforms">Cisco</a></div>
+    <div class="fc"><h5>Company</h5><a href="#contact">Contact Us</a><a href="#contact">Book Demo</a><a href="#contact">Get Started</a></div>
+  </div>
+  <div class="fbot">
+    <span>© 2026 Cloud Ring Solutions. All rights reserved.</span>
+    <div class="fbl"><a href="#">Privacy</a><a href="#">Terms</a><a href="#contact">Contact</a></div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function makeBars(id,n){
+  const el=document.getElementById(id);if(!el)return;
+  for(let i=0;i<n;i++){const b=document.createElement('div');b.className='bar';b.style.height=Math.floor(Math.random()*60+20)+'%';el.appendChild(b);}
+  setInterval(()=>{el.querySelectorAll('.bar').forEach(b=>{b.style.height=Math.floor(Math.random()*60+20)+'%';});},2400);
+}
+makeBars('bars1',18);
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});
+},{threshold:0.07});
+document.querySelectorAll('.sv,.aic,.pl,.stb,.tstep,.msfcard,.auc,.pblock>div,.ci,.cert-card
