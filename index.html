@@ -469,6 +469,237 @@ footer{background:var(--ink);border-top:1px solid var(--br);padding:3rem 3rem 1.
 </head>
 <body>
 
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- INTRO SPLASH ANIMATION                          -->
+<!-- ═══════════════════════════════════════════════ -->
+<div id="intro-splash" style="
+  position:fixed; inset:0; z-index:9999;
+  background:#030712;
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  overflow:hidden;
+">
+
+  <!-- Ambient glow behind logo -->
+  <div id="intro-glow" style="
+    position:absolute;
+    width:600px; height:600px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(14,165,233,0.12) 0%, transparent 70%);
+    opacity:0;
+    transition:opacity 0.8s ease;
+    pointer-events:none;
+  "></div>
+
+  <!-- SVG logo mark — animated -->
+  <svg id="intro-svg" viewBox="0 0 400 400" width="140" height="140"
+       xmlns="http://www.w3.org/2000/svg"
+       style="position:relative;z-index:1;opacity:0;transform:scale(0.85);transition:opacity 0.4s ease, transform 0.6s ease;">
+
+    <!-- BG square fades in first -->
+    <rect id="sq" width="400" height="400" rx="80"
+          fill="#0a1f44" opacity="0"/>
+
+    <!-- Cloud — stroke draws itself -->
+    <path id="cloud-path"
+      d="M52 230 Q52 166 108 152 Q108 72 180 72 Q218 72 238 98 Q254 60 298 60 Q376 60 376 140 Q414 140 414 194 Q414 236 374 240 L68 240 Z"
+      transform="translate(-10,58) scale(0.92)"
+      fill="#1e4080" opacity="0"/>
+
+    <!-- Handset — draws in -->
+    <path id="handset-path"
+      d="M138 230 Q132 200 138 178 L152 152 Q158 140 168 140 L188 142 Q202 144 200 158 L196 170 Q194 180 202 186 Q214 196 226 202 Q236 206 240 198 L244 186 Q248 174 262 176 L284 182 Q296 186 294 200 L290 216 Q284 238 264 242 Q228 250 196 238 Q162 226 138 230 Z"
+      fill="white" opacity="0"/>
+
+    <!-- Ring arc 1 — stroke sweeps -->
+    <path id="ring1"
+      d="M300 155 A46 46 0 0 1 300 242"
+      fill="none" stroke="#4da6ff" stroke-width="22" stroke-linecap="round"
+      stroke-dasharray="200" stroke-dashoffset="200" opacity="0"/>
+
+    <!-- Ring arc 2 — stroke sweeps -->
+    <path id="ring2"
+      d="M334 132 A74 74 0 0 1 334 268"
+      fill="none" stroke="#4da6ff" stroke-width="15" stroke-linecap="round"
+      stroke-dasharray="280" stroke-dashoffset="280" opacity="0.5"/>
+  </svg>
+
+  <!-- Wordmark — appears after logo -->
+  <div id="intro-wordmark" style="
+    position:relative; z-index:1;
+    margin-top:28px;
+    text-align:center;
+    opacity:0; transform:translateY(14px);
+    transition:opacity 0.6s ease, transform 0.6s ease;
+  ">
+    <div style="
+      font-family:'Syne',sans-serif;
+      font-size:1.65rem;
+      font-weight:800;
+      letter-spacing:0.06em;
+      color:#f8fafc;
+      line-height:1.1;
+    ">CLOUD RING <span style="color:#0ea5e9;">SOLUTIONS</span></div>
+    <div id="intro-tagline" style="
+      font-family:'JetBrains Mono',monospace;
+      font-size:0.65rem;
+      letter-spacing:0.28em;
+      text-transform:uppercase;
+      color:rgba(148,163,184,0.7);
+      margin-top:8px;
+      opacity:0;
+      transition:opacity 0.5s ease;
+    ">AI · CONTACT CENTER · AUTOMATION</div>
+  </div>
+
+  <!-- Progress bar at bottom -->
+  <div style="position:absolute;bottom:0;left:0;right:0;height:2px;background:rgba(255,255,255,0.05);">
+    <div id="intro-bar" style="
+      height:100%;
+      width:0%;
+      background:linear-gradient(90deg,#0ea5e9,#7c3aed);
+      transition:width 3.2s cubic-bezier(0.4,0,0.2,1);
+    "></div>
+  </div>
+
+</div>
+
+<style>
+/* Prevent scroll during intro */
+body.intro-active { overflow: hidden; }
+body { overflow-x: hidden; }
+
+/* Page content hidden initially */
+#page-content {
+  opacity: 1;
+  transform: none;
+}
+
+/* Ring arc sweep animation */
+@keyframes sweepArc1 {
+  from { stroke-dashoffset: 200; opacity: 0; }
+  10%  { opacity: 1; }
+  to   { stroke-dashoffset: 0; opacity: 1; }
+}
+@keyframes sweepArc2 {
+  from { stroke-dashoffset: 280; opacity: 0; }
+  10%  { opacity: 0.5; }
+  to   { stroke-dashoffset: 0; opacity: 0.5; }
+}
+</style>
+
+<script>
+(function() {
+  // Skip if already seen this session
+  const seen = sessionStorage.getItem('crs_intro_seen');
+  if (seen) {
+    const el = document.getElementById('intro-splash');
+    if (el) el.style.display = 'none';
+    document.body.style.overflow = '';
+    return;
+  }
+
+  // Lock scroll while intro plays
+  document.body.classList.add('intro-active');
+
+  const splash  = document.getElementById('intro-splash');
+  const glow    = document.getElementById('intro-glow');
+  const svg     = document.getElementById('intro-svg');
+  const sq      = document.getElementById('sq');
+  const cloud   = document.getElementById('cloud-path');
+  const handset = document.getElementById('handset-path');
+  const ring1   = document.getElementById('ring1');
+  const ring2   = document.getElementById('ring2');
+  const wordmark= document.getElementById('intro-wordmark');
+  const tagline = document.getElementById('intro-tagline');
+  const bar     = document.getElementById('intro-bar');
+
+  function delay(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+  async function runIntro() {
+    bar.style.width = '100%';
+
+    // SVG appears
+    await delay(150);
+    svg.style.opacity = '1';
+    svg.style.transform = 'scale(1)';
+
+    // BG square fades in
+    let op = 0;
+    const sqAnim = setInterval(() => {
+      op = Math.min(1, op + 0.07);
+      sq.setAttribute('opacity', op);
+      if (op >= 1) clearInterval(sqAnim);
+    }, 28);
+
+    // Glow
+    await delay(320);
+    glow.style.opacity = '1';
+
+    // Cloud fills in
+    await delay(180);
+    let cop = 0;
+    const cloudAnim = setInterval(() => {
+      cop = Math.min(1, cop + 0.06);
+      cloud.setAttribute('opacity', cop);
+      if (cop >= 1) clearInterval(cloudAnim);
+    }, 25);
+
+    // Handset appears
+    await delay(420);
+    let hop = 0;
+    const handAnim = setInterval(() => {
+      hop = Math.min(0.96, hop + 0.055);
+      handset.setAttribute('opacity', hop);
+      if (hop >= 0.96) clearInterval(handAnim);
+    }, 20);
+
+    // Ring arc 1 sweeps
+    await delay(340);
+    ring1.setAttribute('opacity', '1');
+    ring1.style.animation = 'sweepArc1 0.55s cubic-bezier(0.4,0,0.2,1) forwards';
+
+    // Ring arc 2 sweeps
+    await delay(360);
+    ring2.style.animation = 'sweepArc2 0.55s cubic-bezier(0.4,0,0.2,1) forwards';
+
+    // Wordmark slides up
+    await delay(380);
+    wordmark.style.opacity = '1';
+    wordmark.style.transform = 'translateY(0)';
+
+    // Tagline fades in
+    await delay(440);
+    tagline.style.opacity = '1';
+
+    // Hold for 1s then fade out
+    await delay(1000);
+
+    // Fade out splash — page is already fully visible underneath
+    splash.style.transition = 'opacity 0.7s ease';
+    splash.style.opacity = '0';
+
+    await delay(720);
+    splash.style.display = 'none';
+    document.body.classList.remove('intro-active');
+    document.body.style.overflow = '';
+    sessionStorage.setItem('crs_intro_seen', '1');
+  }
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(runIntro);
+  } else {
+    runIntro();
+  }
+})();
+</script>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- END INTRO SPLASH                                -->
+<!-- ═══════════════════════════════════════════════ -->
+
+<div id="page-content">
 <nav>
   <a href="#home" class="nbrand">
     <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNDAwIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBhMWY0NCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZDJhNWUiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8Y2xpcFBhdGggaWQ9ImNsb3VkLWNsaXAiPgogICAgICA8cGF0aCBkPSJNNTIgMjIwIFE1MiAxNjAgMTA0IDE0OCBRMTA0IDcyIDE3NiA3MiBRMjEyIDcyIDIzMiA5NiBRMjQ4IDYwIDI5MiA2MCBRMzY4IDYwIDM2OCAxMzYgUTQwOCAxMzYgNDA4IDE4OCBRNDA4IDIyOCAzNjggMjI4IFoiLz4KICAgIDwvY2xpcFBhdGg+CiAgPC9kZWZzPgoKICA8IS0tIEJhY2tncm91bmQgcm91bmRlZCBzcXVhcmUgLS0+CiAgPHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI0MDAiIHJ4PSI4MCIgZmlsbD0idXJsKCNiZykiLz4KCiAgPCEtLSBDbG91ZCBzaGFwZSDigJQgc29saWQgbmF2eSBibHVlIC0tPgogIDxwYXRoIGQ9Ik01MiAyMzAgUTUyIDE2NiAxMDggMTUyIFExMDggNzIgMTgwIDcyIFEyMTggNzIgMjM4IDk4IFEyNTQgNjAgMjk4IDYwIFEzNzYgNjAgMzc2IDE0MCBRNDE0IDE0MCA0MTQgMTk0IFE0MTQgMjM2IDM3NCAyNDAgTDY4IDI0MCBaIgogICAgICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMiwgNjApIHNjYWxlKDAuOTMpIgogICAgICAgIGZpbGw9IiMxYTNhNzIiLz4KCiAgPCEtLSBDbG91ZCBzaGFwZSDigJQgc2xpZ2h0bHkgbGlnaHRlciBmb3IgZGVwdGggLS0+CiAgPHBhdGggZD0iTTQ4IDIzOCBRNDggMTY4IDEwNiAxNTIgUTEwNiA2OCAxODAgNjggUTIyMCA2OCAyNDIgOTYgUTI1OCA1NiAzMDIgNTYgUTM4NCA1NiAzODQgMTQwIFE0MjQgMTQwIDQyNCAxOTYgUTQyNCAyNDIgMzgwIDI0NiBMNjQgMjQ2IFoiCiAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwLCA1OCkgc2NhbGUoMC45MikiCiAgICAgICAgZmlsbD0iIzFlNDA4MCIvPgoKICA8IS0tIFBob25lIGhhbmRzZXQg4oCUIHdoaXRlLCBjbGVhbiBwcm9mZXNzaW9uYWwgc2hhcGUgLS0+CiAgPCEtLSBCYXNlZCBvbiBjbGFzc2ljIHRlbGVwaG9uZSByZWNlaXZlciBzaWxob3VldHRlIC0tPgogIDxwYXRoIGQ9IgogICAgTSAxMzggMjMwCiAgICBRIDEzMiAyMDAgMTM4IDE3OAogICAgTCAxNTIgMTUyCiAgICBRIDE1OCAxNDAgMTY4IDE0MAogICAgTCAxODggMTQyCiAgICBRIDIwMiAxNDQgMjAwIDE1OAogICAgTCAxOTYgMTcwCiAgICBRIDE5NCAxODAgMjAyIDE4NgogICAgUSAyMTQgMTk2IDIyNiAyMDIKICAgIFEgMjM2IDIwNiAyNDAgMTk4CiAgICBMIDI0NCAxODYKICAgIFEgMjQ4IDE3NCAyNjIgMTc2CiAgICBMIDI4NCAxODIKICAgIFEgMjk2IDE4NiAyOTQgMjAwCiAgICBMIDI5MCAyMTYKICAgIFEgMjg0IDIzOCAyNjQgMjQyCiAgICBRIDIyOCAyNTAgMTk2IDIzOAogICAgUSAxNjIgMjI2IDEzOCAyMzAKICAgIFoiCiAgICBmaWxsPSJ3aGl0ZSIKICAgIG9wYWNpdHk9IjAuOTYiLz4KCiAgPCEtLSBSaW5nIHdhdmUgYXJjIDEg4oCUIGNsb3Nlciwgc3Ryb25nZXIgYmx1ZSAtLT4KICA8cGF0aCBkPSJNIDMwMCAxNTUgQSA0NiA0NiAwIDAgMSAzMDAgMjQyIgogICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzRkYTZmZiIgc3Ryb2tlLXdpZHRoPSIxNCIKICAgICAgICBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KCiAgPCEtLSBSaW5nIHdhdmUgYXJjIDIg4oCUIGZ1cnRoZXIsIGxpZ2h0ZXIgYmx1ZSAtLT4KICA8cGF0aCBkPSJNIDMyMiAxMzYgQSA3MiA3MiAwIDAgMSAzMjIgMjYyIgogICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzRkYTZmZiIgc3Ryb2tlLXdpZHRoPSIxMCIKICAgICAgICBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9IjAuNSIvPgoKPC9zdmc+" alt="Cloud Ring Solutions Logo" style="width:42px;height:42px;border-radius:9px;display:block;flex-shrink:0;">
@@ -1003,14 +1234,26 @@ footer{background:var(--ink);border-top:1px solid var(--br);padding:3rem 3rem 1.
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 function makeBars(id,n){
   const el=document.getElementById(id);if(!el)return;
   for(let i=0;i<n;i++){const b=document.createElement('div');b.className='bar';b.style.height=Math.floor(Math.random()*60+20)+'%';el.appendChild(b);}
   setInterval(()=>{el.querySelectorAll('.bar').forEach(b=>{b.style.height=Math.floor(Math.random()*60+20)+'%';});},2400);
 }
 makeBars('bars1',18);
+
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});
 },{threshold:0.07});
-document.querySelectorAll('.sv,.aic,.pl,.stb,.tstep,.msfcard,.auc,.pblock>div,.ci,.cert-card
+
+document.querySelectorAll('.sv,.aic,.pl,.stb,.tstep,.msfcard,.auc,.pblock>div,.ci,.cert-card,.msvis,.afnode').forEach((el,i)=>{
+  el.style.opacity='0';
+  el.style.transform='translateY(16px)';
+  el.style.transition=`opacity 0.6s ease ${(i%4)*0.09}s,transform 0.6s ease ${(i%4)*0.09}s`;
+  obs.observe(el);
+});
+</script>
+
+</div><!-- /page-content -->
+</body>
+</html>
