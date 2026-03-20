@@ -340,24 +340,154 @@ footer{background:var(--ink);border-top:1px solid var(--br);padding:3rem 3rem 1.
 .fc a{display:block;font-size:0.77rem;color:var(--mt);text-decoration:none;margin-bottom:0.4rem;transition:color 0.2s;}.fc a:hover{color:var(--sky);}
 .fbot{display:flex;justify-content:space-between;align-items:center;padding-top:1.5rem;border-top:1px solid var(--br);font-size:0.72rem;color:var(--mt);}
 .fbl{display:flex;gap:1.3rem;}.fbl a{color:var(--mt);text-decoration:none;transition:color 0.2s;}.fbl a:hover{color:var(--sky);}
-@media(max-width:1024px){
-  nav{padding:0.85rem 1.5rem;}
+@media(max-width:768px){
+
+  /* NAV */
+  nav{padding:0.85rem 1.2rem;}
   .nlinks{display:none;}
-  .sec,.hero{padding:4.5rem 1.5rem;}
-  .hw{grid-template-columns:1fr;}
+  .nact .bg{display:none;}
+  .bs{padding:0.42rem 0.9rem;font-size:0.68rem;}
+  .nbrand-name{font-size:0.85rem;}
+  .nbrand-tag{display:none;}
+
+  /* SECTIONS */
+  .sec{padding:3.5rem 1.2rem;}
+  .hero{padding:5.5rem 1.2rem 3rem;}
+  .sh{font-size:1.7rem;}
+  .sp{font-size:0.88rem;}
+
+  /* HERO */
+  .hw{grid-template-columns:1fr;gap:2rem;}
   .hero-vis{display:none;}
-  .svgrid,.aicards{grid-template-columns:1fr;}
-  .augrid{grid-template-columns:1fr 1fr;}
-  .pblock,.msgrid,.trgrid,.aisi,.ctgrid{grid-template-columns:1fr;gap:2.5rem;}
-  .pblock.flip{direction:ltr;}
-  .plgrid{grid-template-columns:1fr 1fr;}
-  .stsrow{grid-template-columns:1fr 1fr;}
-  .ftop{grid-template-columns:1fr 1fr;gap:2rem;}
-  .crow{grid-template-columns:1fr;}
-  .afrow{flex-wrap:wrap;gap:0.5rem;}
-  .afarr{display:none;}
+  h1.hero-h{font-size:2.4rem;}
+  .hp{font-size:0.9rem;}
+  .hbtns{flex-direction:column;gap:0.6rem;}
+  .bpri,.bout{width:100%;justify-content:center;text-align:center;}
+  .hst{gap:1.5rem;}
+  .hsn{font-size:1.5rem;}
+  .hsl{font-size:0.62rem;}
+
+  /* MARQUEE */
+  .mq{padding:1.2rem 0;}
+  .mc{font-size:0.65rem;padding:0.3rem 0.7rem;}
+
+  /* SERVICES GRID */
+  .svgrid{grid-template-columns:1fr;}
+  .sv{padding:1.5rem;}
+
+  /* PHOTO SECTIONS */
+  .photo-hero-strip{height:340px;}
+  .photo-hero-strip .overlay{padding:0 1.2rem;}
+  .photo-hero-strip .overlay h2{font-size:1.5rem;}
+  .photo-hero-strip .overlay p{font-size:0.85rem;}
+  .photo-grid{grid-template-columns:1fr;gap:3px;}
+  .photo-card{height:220px;}
+  .photo-card.tall{height:220px;grid-row:span 1;}
+  .photo-card-overlay{padding:1.2rem;}
+  .photo-card-overlay h3{font-size:0.95rem;}
+  .photo-card-overlay p{display:none;}
+  .split-section{grid-template-columns:1fr;}
+  .split-img{height:240px;}
+  .split-content{padding:2.5rem 1.2rem;}
+  .split-content h2{font-size:1.6rem;}
+
+  /* TRAINING */
+  .trgrid{grid-template-columns:1fr;gap:2rem;}
+  .tstep{gap:0.9rem;padding:1rem 0;}
+  .tnum{width:30px;height:30px;font-size:0.7rem;}
+  .tbody h4{font-size:0.88rem;}
+  .tbody p{font-size:0.78rem;}
+  .cert-card{padding:1.2rem;}
+  .cstats{grid-template-columns:repeat(3,1fr);}
+
+  /* MANAGED SERVICES */
+  .msgrid{grid-template-columns:1fr;gap:2rem;}
+  .msmet{grid-template-columns:1fr 1fr;}
   .msf{grid-template-columns:1fr;}
+  .msfcard{padding:1rem;}
+
+  /* AUTOMATION */
+  .augrid{grid-template-columns:1fr;}
+  .auc{padding:1.5rem;}
+  .auflow{padding:1.2rem;}
+  .afrow{flex-direction:column;align-items:stretch;gap:0.5rem;}
+  .afarr{display:none;}
+  .afnode{max-width:100%;padding:0.7rem 1rem;display:flex;align-items:center;gap:0.8rem;}
+  .afnic{font-size:1.2rem;margin:0;}
+  .afnl{font-size:0.75rem;}
+  .afns{font-size:0.62rem;}
+
+  /* AI SECTION */
+  .aisi{grid-template-columns:1fr;gap:2rem;}
+  .aistrip{padding:1.8rem 1.2rem;}
+  .aicards{grid-template-columns:1fr;}
+  .aic{padding:1.4rem;}
+  .chatmock{max-height:300px;overflow:hidden;}
+
+  /* PRODUCTS */
+  .pblock{grid-template-columns:1fr;gap:2rem;padding:2.5rem 0;}
+  .pblock.flip{direction:ltr;}
+  .ph{font-size:1.7rem;}
+  .psub{font-size:0.87rem;}
+  .pbtn{width:100%;justify-content:center;}
+
+  /* PLATFORMS */
+  .plgrid{grid-template-columns:1fr 1fr;}
+  .pl{padding:1.3rem;}
+  .plic{font-size:1.5rem;}
+  .pln{font-size:0.85rem;}
+  .pld{font-size:0.7rem;}
+
+  /* STATS */
+  .stsrow{grid-template-columns:1fr 1fr;}
+  .stb{padding:2rem 1rem;}
+  .stn{font-size:2rem;}
+  .stl{font-size:0.62rem;}
+
+  /* CTA */
+  .ctasec{padding:4rem 1.2rem;}
+  .ctain h2{font-size:1.8rem;}
+  .ctain p{font-size:0.88rem;}
+  .ctabtns{flex-direction:column;align-items:center;gap:0.6rem;}
+  .ctabtns .bpri,.ctabtns .bout{width:100%;max-width:320px;justify-content:center;}
+
+  /* CONTACT */
+  .ctsec{padding:3.5rem 1.2rem;}
+  .ctgrid{grid-template-columns:1fr;gap:2.5rem;}
+  .crow{grid-template-columns:1fr;}
+  .cform button{width:100%;justify-content:center;}
+  .pchips{padding:1rem;}
+  .chiprow{gap:0.3rem;}
+  .chip{font-size:0.62rem;padding:0.25rem 0.6rem;}
+
+  /* FOOTER */
+  footer{padding:2.5rem 1.2rem 1.5rem;}
+  .ftop{grid-template-columns:1fr;gap:1.5rem;}
+  .fbot{flex-direction:column;gap:0.8rem;text-align:center;}
+  .fbl{gap:1rem;}
+
+  /* TAGS */
+  .tags{gap:0.25rem;}
+  .tag{font-size:0.58rem;}
+
+  /* INTRO SPLASH */
+  #intro-svg{width:110px;height:110px;}
+  .wm-main{font-size:1.3rem;}
+  .wm-tag{font-size:0.55rem;letter-spacing:0.2em;}
+
 }
+
+/* Extra small phones */
+@media(max-width:380px){
+  h1.hero-h{font-size:2rem;}
+  .sh{font-size:1.5rem;}
+  .hst{flex-direction:column;gap:0.8rem;padding-top:1.2rem;}
+  .plgrid{grid-template-columns:1fr;}
+  .stsrow{grid-template-columns:1fr;}
+  .cstats{grid-template-columns:1fr 1fr;}
+}
+
+
 
 /* ── PHOTO SECTIONS ── */
 .photo-hero-strip {
@@ -463,6 +593,70 @@ footer{background:var(--ink);border-top:1px solid var(--br);padding:3rem 3rem 1.
   .split-section { grid-template-columns: 1fr; }
   .split-img { height: 280px; }
   .split-content { padding: 3rem 1.5rem; }
+}
+
+
+/* MOBILE HAMBURGER */
+.mob-menu-btn {
+  display: none;
+  background: none;
+  border: 1px solid var(--br);
+  color: var(--w);
+  padding: 0.4rem 0.7rem;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  line-height: 1;
+  order: -1;
+}
+.mob-nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(3,7,18,0.97);
+  backdrop-filter: blur(16px);
+  z-index: 150;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+.mob-nav-overlay.open { display: flex; }
+.mob-nav-overlay a {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--w);
+  text-decoration: none;
+  padding: 1rem 2rem;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--br);
+  width: 100%;
+  text-align: center;
+  transition: color 0.2s;
+}
+.mob-nav-overlay a:hover { color: var(--sky); }
+.mob-nav-overlay a:first-child { border-top: 1px solid var(--br); }
+.mob-nav-close {
+  position: absolute;
+  top: 1.2rem; right: 1.4rem;
+  background: none; border: none;
+  color: var(--mt); font-size: 1.6rem;
+  cursor: pointer; padding: 0.5rem;
+}
+.mob-cta-row {
+  display: flex; gap: 0.8rem; padding: 1.5rem 2rem 0;
+}
+.mob-cta-row a { 
+  font-size: 0.8rem !important;
+  padding: 0.7rem 1.4rem !important;
+  border-radius: 5px !important;
+  border-bottom: none !important;
+  width: auto !important;
+}
+@media(max-width:768px) {
+  .mob-menu-btn { display: block; }
+  nav { gap: 0.6rem; }
 }
 
 </style>
@@ -700,6 +894,22 @@ body { overflow-x: hidden; }
 <!-- ═══════════════════════════════════════════════ -->
 
 <div id="page-content">
+
+<!-- MOBILE NAV OVERLAY -->
+<div class="mob-nav-overlay" id="mobNav">
+  <button class="mob-nav-close" onclick="toggleMobileMenu()">&#10005;</button>
+  <a href="#services" onclick="toggleMobileMenu()">Services</a>
+  <a href="#training" onclick="toggleMobileMenu()">Training</a>
+  <a href="#managed" onclick="toggleMobileMenu()">Managed Services</a>
+  <a href="#automation" onclick="toggleMobileMenu()">Automation</a>
+  <a href="#agentpro" onclick="toggleMobileMenu()">AgentPro</a>
+  <a href="#vantage" onclick="toggleMobileMenu()">VantageDial</a>
+  <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+  <div class="mob-cta-row">
+    <a href="#contact" class="bs" onclick="toggleMobileMenu()">Get Started →</a>
+  </div>
+</div>
+
 <nav>
   <a href="#home" class="nbrand">
     <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNDAwIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBhMWY0NCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZDJhNWUiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8Y2xpcFBhdGggaWQ9ImNsb3VkLWNsaXAiPgogICAgICA8cGF0aCBkPSJNNTIgMjIwIFE1MiAxNjAgMTA0IDE0OCBRMTA0IDcyIDE3NiA3MiBRMjEyIDcyIDIzMiA5NiBRMjQ4IDYwIDI5MiA2MCBRMzY4IDYwIDM2OCAxMzYgUTQwOCAxMzYgNDA4IDE4OCBRNDA4IDIyOCAzNjggMjI4IFoiLz4KICAgIDwvY2xpcFBhdGg+CiAgPC9kZWZzPgoKICA8IS0tIEJhY2tncm91bmQgcm91bmRlZCBzcXVhcmUgLS0+CiAgPHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI0MDAiIHJ4PSI4MCIgZmlsbD0idXJsKCNiZykiLz4KCiAgPCEtLSBDbG91ZCBzaGFwZSDigJQgc29saWQgbmF2eSBibHVlIC0tPgogIDxwYXRoIGQ9Ik01MiAyMzAgUTUyIDE2NiAxMDggMTUyIFExMDggNzIgMTgwIDcyIFEyMTggNzIgMjM4IDk4IFEyNTQgNjAgMjk4IDYwIFEzNzYgNjAgMzc2IDE0MCBRNDE0IDE0MCA0MTQgMTk0IFE0MTQgMjM2IDM3NCAyNDAgTDY4IDI0MCBaIgogICAgICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMiwgNjApIHNjYWxlKDAuOTMpIgogICAgICAgIGZpbGw9IiMxYTNhNzIiLz4KCiAgPCEtLSBDbG91ZCBzaGFwZSDigJQgc2xpZ2h0bHkgbGlnaHRlciBmb3IgZGVwdGggLS0+CiAgPHBhdGggZD0iTTQ4IDIzOCBRNDggMTY4IDEwNiAxNTIgUTEwNiA2OCAxODAgNjggUTIyMCA2OCAyNDIgOTYgUTI1OCA1NiAzMDIgNTYgUTM4NCA1NiAzODQgMTQwIFE0MjQgMTQwIDQyNCAxOTYgUTQyNCAyNDIgMzgwIDI0NiBMNjQgMjQ2IFoiCiAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwLCA1OCkgc2NhbGUoMC45MikiCiAgICAgICAgZmlsbD0iIzFlNDA4MCIvPgoKICA8IS0tIFBob25lIGhhbmRzZXQg4oCUIHdoaXRlLCBjbGVhbiBwcm9mZXNzaW9uYWwgc2hhcGUgLS0+CiAgPCEtLSBCYXNlZCBvbiBjbGFzc2ljIHRlbGVwaG9uZSByZWNlaXZlciBzaWxob3VldHRlIC0tPgogIDxwYXRoIGQ9IgogICAgTSAxMzggMjMwCiAgICBRIDEzMiAyMDAgMTM4IDE3OAogICAgTCAxNTIgMTUyCiAgICBRIDE1OCAxNDAgMTY4IDE0MAogICAgTCAxODggMTQyCiAgICBRIDIwMiAxNDQgMjAwIDE1OAogICAgTCAxOTYgMTcwCiAgICBRIDE5NCAxODAgMjAyIDE4NgogICAgUSAyMTQgMTk2IDIyNiAyMDIKICAgIFEgMjM2IDIwNiAyNDAgMTk4CiAgICBMIDI0NCAxODYKICAgIFEgMjQ4IDE3NCAyNjIgMTc2CiAgICBMIDI4NCAxODIKICAgIFEgMjk2IDE4NiAyOTQgMjAwCiAgICBMIDI5MCAyMTYKICAgIFEgMjg0IDIzOCAyNjQgMjQyCiAgICBRIDIyOCAyNTAgMTk2IDIzOAogICAgUSAxNjIgMjI2IDEzOCAyMzAKICAgIFoiCiAgICBmaWxsPSJ3aGl0ZSIKICAgIG9wYWNpdHk9IjAuOTYiLz4KCiAgPCEtLSBSaW5nIHdhdmUgYXJjIDEg4oCUIGNsb3Nlciwgc3Ryb25nZXIgYmx1ZSAtLT4KICA8cGF0aCBkPSJNIDMwMCAxNTUgQSA0NiA0NiAwIDAgMSAzMDAgMjQyIgogICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzRkYTZmZiIgc3Ryb2tlLXdpZHRoPSIxNCIKICAgICAgICBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KCiAgPCEtLSBSaW5nIHdhdmUgYXJjIDIg4oCUIGZ1cnRoZXIsIGxpZ2h0ZXIgYmx1ZSAtLT4KICA8cGF0aCBkPSJNIDMyMiAxMzYgQSA3MiA3MiAwIDAgMSAzMjIgMjYyIgogICAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzRkYTZmZiIgc3Ryb2tlLXdpZHRoPSIxMCIKICAgICAgICBzdHJva2UtbGluZWNhcD0icm91bmQiIG9wYWNpdHk9IjAuNSIvPgoKPC9zdmc+" alt="Cloud Ring Solutions Logo" style="width:42px;height:42px;border-radius:9px;display:block;flex-shrink:0;">
@@ -717,6 +927,7 @@ body { overflow-x: hidden; }
     <li><a href="#vantage">VantageDial</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <button class="mob-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">&#9776;</button>
   <div class="nact">
     <a href="#contact" class="bg">Book Demo</a>
     <a href="#contact" class="bs">Get Started →</a>
@@ -1255,5 +1466,14 @@ document.querySelectorAll('.sv,.aic,.pl,.stb,.tstep,.msfcard,.auc,.pblock>div,.c
 </script>
 
 </div><!-- /page-content -->
+
+<script>
+function toggleMobileMenu() {
+  const nav = document.getElementById('mobNav');
+  nav.classList.toggle('open');
+  document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+}
+</script>
+
 </body>
 </html>
